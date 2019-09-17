@@ -12,3 +12,7 @@ Venue.create!(name: 'Cervantes', location: 'Copacabana, Rio de Janeiro')
 Venue.create!(name: 'Lapa 40', location: 'Lapa, Rio de Janeiro')
 Venue.create!(name: 'Sugar Loaf', location: 'Urca, Rio de Janeiro')
 Venue.create!(name: 'Sinuca da Bambina', location: 'Botafogo, Rio de Janeiro')
+
+puts "....."
+puts "seeds created"
+puts "....."
