@@ -1,2 +1,7 @@
-<h1>Venues#index</h1>
-<p>Find me in app/views/venues/index.html.erb</p>
+<h1>This is the landing page </h1>
+
+<% @venues.each do |venue| %>
+   <%= venue.picture %>
+<p><%= venue.name %></p>
+<p><%= venue.location %></p>
+<% end %>
