@@ -1,5 +1,6 @@
 class Venue < ApplicationRecord
+  has_many :bookings
   has_many :users, through: :bookings
   validates :name, presence: true, uniqueness: true
-  validates :address, presence: true
+  validates :location, presence: true
 end
