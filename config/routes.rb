@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'venues/index'
+  get 'venues/show'
+  get 'venues/update'
   get 'venue/index'
   get 'venue/show'
   get 'venue/update'
