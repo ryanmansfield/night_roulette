@@ -7,12 +7,38 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Venue.destroy_all
+puts "<<< old venues data erased"
 
-Venue.create!(name: 'Cervantes', location: 'Copacabana, Rio de Janeiro')
-Venue.create!(name: 'Lapa 40', location: 'Lapa, Rio de Janeiro')
-Venue.create!(name: 'Sugar Loaf', location: 'Urca, Rio de Janeiro')
-Venue.create!(name: 'Sinuca da Bambina', location: 'Botafogo, Rio de Janeiro')
+Venue.create!(
+    name: 'Cervantes',
+    location: 'Copacabana, Rio de Janeiro',
+    price: 4,
+    rating: 5,
+    hours: '3 am'
+)
 
-puts "....."
-puts "seeds created"
-puts "....."
+Venue.create!(
+    name: 'Lapa 40',
+    location: 'Lapa, Rio de Janeiro',
+    price: 3,
+    rating: 3,
+    hours: '5 am'
+)
+
+Venue.create!(
+    name: 'Sugar Loaf',
+    location: 'Urca, Rio de Janeiro',
+    price: 2,
+    rating: 4,
+    hours: '7 pm'
+)
+
+Venue.create!(
+    name: 'Sinuca da Bambina',
+    location: 'Botafogo, Rio de Janeiro',
+    price: 1,
+    rating: 2,
+    hours: '4 am'
+)
+
+puts ">>> db is seeded with venues"
