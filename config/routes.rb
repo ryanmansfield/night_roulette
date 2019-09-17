@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/new'
+  get 'users/update'
+  get 'users/show'
   get 'venues/index'
   get 'venues/show'
   get 'venues/update'
