@@ -5,7 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Booking.destroy_all
+User.destroy_all
 Venue.destroy_all
 puts "<<< old venues data erased"
 
@@ -42,3 +43,11 @@ Venue.create!(
 )
 
 puts ">>> db is seeded with venues"
+
+User.create!(
+  name: 'Diana',
+  email: 'diana@gmail.com',
+  password: '12345678'
+).bookings.create!(
+  venue: Venue.first
+)
