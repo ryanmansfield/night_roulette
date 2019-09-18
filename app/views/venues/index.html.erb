@@ -1,44 +1,51 @@
-
-<div>
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  </div>
-  <div class="landing-page-content">
-    <div class="row" style="text-align: center;">
-      <div class="header-text col-9" style="margin: 25px auto;">
-        <h1>Night Roulette</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Night Roulette</title>
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+</head>
+<body>
+  <div>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);">
+    </div>
+  <div class="container">
+    <div class="landing-page-content">
+      <div class="row" style="text-align: center;">
+        <div class="header-text col-9" style="margin: 25px auto;">
+          <h1> Night Roulette </h1>
+          <p class="headline load-hidden">
+          Get ready for the best night of your life
+          </p>
+        </div>
+      </div>
+      <div class="row col-12">
+        <% @venues.each do |venue| %>
+        <div class="landing-page-card ">
+          <img src="<%= venue.picture %>" alt="venue picture">
+          <h3><%= venue.name %></h3>
+          <p><%= venue.location %></p>
+          <% end %>
+        </div>
       </div>
     </div>
-    <div class="row col-12">
-      <div class="landing-page-card ">
-        <img src="assets/bar1.jpg" alt="" style="width:257px; height: 131px; border-radius: 33px 33px 0px 0px; ">
-        <h3>ColLab</h3>
-        <p>Botafogo, Rio de Janeiro</p>
-      </div>
-    </div>
-    <div class="row col-12">
-      <div class="landing-page-card-instruction">
-        <div class="row col-9 mx-5 px-3">
-          <h3 style="margin:20px;">How it Works</h3>
-          <i class="far fa-check-square"> Select your Preferences </i>
-          <i class="far fa-check-square"> Connect your Uber </i>
-          <i class="far fa-check-square"> Spin the Wheel </i>
-          <i class="far fa-check-square"> Have the Time of Your Life! </i>
+      <div class="row col-12">
+        <div class="landing-page-card-instruction">
+          <div class="row col-9 mx-5 px-3">
+            <h3 style="margin:20px;">How it Works</h3>
+            <i class="far fa-check-square"> Select your Preferences </i>
+            <i class="far fa-check-square"> Connect your Uber </i>
+            <i class="far fa-check-square"> Spin the Wheel </i>
+            <i class="far fa-check-square"> Have the Time of Your Life! </i>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <script>
+    ScrollReveal().reveal('.headline', { duration: 2000 });
+    ScrollReveal().reveal('.landing-page-card', { interval: 300 });
+  </script>
+</body>
+</html>
 
-
-<!--
-<% @venues.each do |venue| %>
-   <%= venue.picture %>
-<p><%= venue.name %></p>
-<p><%= venue.location %></p>
-<% end %>
-
-<%= @aphigh['results'][0]['name'] %>
-
- -->
 
