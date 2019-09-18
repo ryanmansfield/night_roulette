@@ -5,7 +5,7 @@ class VenuesController < ApplicationController
 
   def index
     @venues = Venue.all
-    @aphigh = GooglePlaces.new.find_by_location
+    @aphigh = GooglePlaces.new.find
   end
 
   def show
