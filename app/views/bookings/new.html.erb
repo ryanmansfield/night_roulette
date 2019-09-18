@@ -12,7 +12,10 @@
           <%= simple_form_for @booking do |f| %>
 
             <%= f.button :submit %>
-            <%= f.input :time,     as: :radio_buttons %>
+
+            <%= f.input :restaurant,     as: :radio_buttons %>
+            <%= f.input :bar,            as: :radio_buttons %>
+            <%= f.input :nightclub,      as: :radio_buttons %>
 
           <% end %>
         </div>
