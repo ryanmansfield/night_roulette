@@ -1,2 +1,29 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<div>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  </div>
+  <div class="booking-new">
+    <div class="row" style="text-align: center;">
+      <div class="header-text col-9" style="margin: 25px auto;">
+        <h1>Night Roulette</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+
+        <div class="booking-form">
+          <%= simple_form_for @booking do |f| %>
+
+            <%= f.button :submit %>
+
+            <%= f.input :restaurant,     as: :radio_buttons %>
+            <%= f.input :bar,            as: :radio_buttons %>
+            <%= f.input :nightclub,      as: :radio_buttons %>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
