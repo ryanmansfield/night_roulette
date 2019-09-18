@@ -42,3 +42,4 @@ Venue.create!(
 )
 
 puts ">>> db is seeded with venues"
+
