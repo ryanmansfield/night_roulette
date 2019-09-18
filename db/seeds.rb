@@ -15,6 +15,8 @@ Venue.create!(
     price: 4,
     rating: 5,
     hours: '3 am'
+    type: "restaurant"
+    characteristics: ["vegan", "shellfish"]
 )
 
 Venue.create!(
@@ -23,6 +25,8 @@ Venue.create!(
     price: 3,
     rating: 3,
     hours: '5 am'
+    type: "restaurant"
+    characteristics: "vegan"
 )
 
 Venue.create!(
@@ -31,6 +35,8 @@ Venue.create!(
     price: 2,
     rating: 4,
     hours: '7 pm'
+    type: "bar"
+    characteristics: ["live music"]
 )
 
 Venue.create!(
@@ -39,6 +45,8 @@ Venue.create!(
     price: 1,
     rating: 2,
     hours: '4 am'
+    type: "nightclub"
+    characteristics:
 )
 
 puts ">>> db is seeded with venues"
