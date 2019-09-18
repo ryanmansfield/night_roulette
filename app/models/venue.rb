@@ -5,7 +5,7 @@ class Venue < ApplicationRecord
   validates :location, presence: true
 
   def self.find_random(type, user)
-    # TODO: this will be the 3 bar rest nightclub filters and user will be user preferences
+    # TODO: this will be the 3 bar rest nightclub types and user will be user preferences
 
     # Find which types were selected from the new bookings form
 
