@@ -4,7 +4,7 @@ class Venue < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :location, presence: true
 
-  def self.find_random(filters, user)
+  def self.find_random(type, user)
     # TODO: this will be the 3 bar rest nightclub filters and user will be user preferences
 
     all_venues = Venue.all
