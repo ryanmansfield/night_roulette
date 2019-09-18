@@ -14,3 +14,4 @@ class Venue < ApplicationRecord
     Venue.last
   end
 end
+

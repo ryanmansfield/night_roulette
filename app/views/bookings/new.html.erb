@@ -10,12 +10,14 @@
 
         <div class="booking-form">
           <%= simple_form_for @booking do |f| %>
-
+              <!-- TODO change this button into the wheel and add javascript -->
             <%= f.button :submit %>
-
+              <!-- This is our 3 booking filters -->
             <%= f.input :restaurant,     as: :radio_buttons %>
             <%= f.input :bar,            as: :radio_buttons %>
             <%= f.input :nightclub,      as: :radio_buttons %>
+              <!-- This is our guest counts -->
+            <%= f.input[type=number] :passengers,      as: :radio_buttons %>
 
           <% end %>
         </div>
