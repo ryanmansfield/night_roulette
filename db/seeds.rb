@@ -14,9 +14,9 @@ Venue.create!(
     location: 'Copacabana, Rio de Janeiro',
     price: 4,
     rating: 5,
-    hours: '3 am'
-    type: "restaurant"
-    characteristics: ["vegan", "shellfish"]
+    hours: '3 am',
+    venue_type: 'restaurant',
+    characteristics: ['vegan', 'shellfish']
 )
 
 Venue.create!(
@@ -24,9 +24,9 @@ Venue.create!(
     location: 'Lapa, Rio de Janeiro',
     price: 3,
     rating: 3,
-    hours: '5 am'
-    type: "restaurant"
-    characteristics: "vegan"
+    hours: '5 am',
+    venue_type: 'restaurant',
+    characteristics: ['vegan']
 )
 
 Venue.create!(
@@ -34,9 +34,9 @@ Venue.create!(
     location: 'Urca, Rio de Janeiro',
     price: 2,
     rating: 4,
-    hours: '7 pm'
-    type: "bar"
-    characteristics: ["live music"]
+    hours: '7 pm',
+    venue_type: 'bar',
+    characteristics: ['live music']
 )
 
 Venue.create!(
@@ -44,9 +44,9 @@ Venue.create!(
     location: 'Botafogo, Rio de Janeiro',
     price: 1,
     rating: 2,
-    hours: '4 am'
-    type: "nightclub"
-    characteristics:
+    hours: '4 am',
+    venue_type: 'nightclub',
+    characteristics: []
 )
 
 puts ">>> db is seeded with venues"
