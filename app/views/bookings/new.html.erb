@@ -15,7 +15,8 @@
               <!-- TODO change this button into the wheel and add javascript -->
             <%= f.button :submit, "SPIN THE WHEEL" %>
               <!-- This is our 3 booking filters -->
-            <%=  f.collection_check_boxes :venue_types, [['restaurants', 'Restaurants'], ['bar', 'Bar'], ['nightclub', 'Nightclub'] ], :first, :last %>
+            <%=  f.collection_check_boxes :venue_types, [['restaurant', 'Restaurant'],
+            ['bar', 'Bar'], ['nightclub', 'Nightclub'] ], :first, :last %>
               <!-- This is our guest counts -->
             <%= f.input :passengers, collection: 1..4, include_blank: false %>
 
