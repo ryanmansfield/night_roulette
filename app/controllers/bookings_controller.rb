@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.new(booking_params)
     @booking.venue = @venue
     if @booking.save
+      # call the call_uber method to generate an uber request (Bookings model)
       redirect_to booking_path(@booking)
     else
       render :new
