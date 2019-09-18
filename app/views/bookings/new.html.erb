@@ -5,20 +5,25 @@
     <div class="row" style="text-align: center;">
       <div class="header-text col-9" style="margin: 25px auto;">
         <h1>Night Roulette</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Select you filters and spin the wheel</p>
+
+        <p>Please confirm this is your current location</p>
 
 
         <div class="booking-form">
           <%= simple_form_for @booking do |f| %>
-
-            <%= f.button :submit %>
-
+              <!-- TODO change this button into the wheel and add javascript -->
+            <%= f.button :submit, "SPIN THE WHEEL" %>
+              <!-- This is our 3 booking filters -->
             <%= f.input :restaurant,     as: :radio_buttons %>
             <%= f.input :bar,            as: :radio_buttons %>
             <%= f.input :nightclub,      as: :radio_buttons %>
+              <!-- This is our guest counts -->
+            <%= f.input[type=number] :passengers,      as: :radio_buttons %>
 
           <% end %>
         </div>
+
       </div>
     </div>
   </div>
