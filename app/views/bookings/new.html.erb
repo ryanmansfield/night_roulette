@@ -5,24 +5,30 @@
     <div class="row" style="text-align: center;">
       <div class="header-text col-9" style="margin: 25px auto;">
         <h1>Night Roulette</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Select you filters and spin the wheel</p>
+
+        <p>Please confirm this is your current location</p>
 
 
         <div class="booking-form">
           <%= simple_form_for @booking do |f| %>
-
-            <%= f.button :submit %>
-
-            <%= f.input :restaurant,     as: :radio_buttons %>
-            <%= f.input :bar,            as: :radio_buttons %>
-            <%= f.input :nightclub,      as: :radio_buttons %>
+              <!-- TODO change this button into the wheel and add javascript -->
+            <%= f.button :submit, "SPIN THE WHEEL" %>
+              <!-- This is our 3 booking filters -->
+            <%=  f.collection_check_boxes :venue_types, [['restaurant', 'Restaurant'],
+            ['bar', 'Bar'], ['nightclub', 'Nightclub'] ], :first, :last %>
+              <!-- This is our guest counts -->
+            <%= f.input :passengers, label: 'Passengers Count', collection: 1..4, include_blank: false %>
 
           <% end %>
         </div>
+
       </div>
     </div>
   </div>
 </div>
+
+
 
 
 
