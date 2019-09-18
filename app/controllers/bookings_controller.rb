@@ -4,22 +4,19 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings
   end
 
-  def new
-    @venue = Venue.find(params[:venue_id])
-    @booking = Booking.new
-  end
-
   def show
     @booking = Booking.find(params[:id])
     @venue = @booking.venue
   end
 
+  def new
+    @booking = Booking.new
+  end
+
   def create
-    @venue = Venue.find(params[:venue_id])
-    @user = current_user
-    @booking = Booking.new(booking_params)
+    @venue = Venue.find_random(params[:filter], current_user)
+    @booking = current_user.bookings.new(booking_params)
     @booking.venue = @venue
-    @booking.user = @user
     if @booking.save
       redirect_to booking_path(@booking)
     else
@@ -30,6 +27,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :user_id, :time)
+    params.require(:booking).permit(:date, :time)
   end
 end
