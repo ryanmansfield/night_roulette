@@ -16,6 +16,7 @@ class BookingsController < ApplicationController
   def create
     @venue = Venue.find_random(params[:filter], current_user)
     @booking = current_user.bookings.new(booking_params)
+
     @booking.venue = @venue
     if @booking.save
       # call the call_uber method to generate an uber request (Bookings model)
