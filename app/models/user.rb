@@ -6,4 +6,10 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :venues, through: :bookings
   has_many :bookings
+
+  def prefs_sql
+    preferences.map do |preference|
+      "'#{preference}' = ANY(characteristics)"
+    end.join(" OR ")
+  end
 end

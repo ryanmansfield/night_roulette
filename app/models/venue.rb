@@ -7,13 +7,10 @@ class Venue < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
 
   def self.find_random(type, user)
-    # TODO: this will be the 3 bar rest nightclub types and user will be user preferences
+    where(venue_type: type).where(user.prefs_sql).order("RANDOM()").first
+  end
 
-    # Find which types were selected from the new bookings form
-
-    # Check venues were type match to see if they qualify for the users preferences
-
-
-    Venue.last
+  def self.curated_for_user_count(user)
+    where(user.prefs_sql).group(:venue_type).count
   end
 end
