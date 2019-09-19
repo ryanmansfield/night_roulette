@@ -15,21 +15,23 @@
               <!-- TODO change this button into the wheel and add javascript -->
             <%= f.button :submit, "SPIN THE WHEEL" %>
               <!-- This is our 3 booking filters -->
-            <div>
-              <%=  f.collection_radio_buttons :venue_types, [['restaurant', 'Restaurant'],
-              ['bar', 'Bar'], ['nightclub', 'Nightclub'] ], :first, :last, {:item_wrapper_class => 'foo-bar'} %>
+            <div class="container">
 
-            </div>
-              <!-- This is our guest counts -->
-            <div class="container-passengers">
-                <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
-                <%= f.input :passengers, classes: 'passenger-amount', label: 'Passengers Count', input_html: {value: '1', disabled: true} %>
-                <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
-            </div>
+              <div>
+                <%=  f.collection_radio_buttons :venue_types, [['restaurant', 'Restaurant'],
+                ['bar', 'Bar'], ['nightclub', 'Nightclub'] ], :first, :last, {:item_wrapper_class => 'venue_types_buttons'} %>
+              </div>
 
+              <div class="container-passengers">
+                <!-- This is our guest counts -->
+                <div class="plus-minus">
+                    <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
+                    <%= f.input :passengers, classes: 'passenger-amount', label: 'Passengers Count', input_html: {value: '1', disabled: true} %>
+                    <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
+                </div>
+            </div>
           <% end %>
         </div>
-
       </div>
     </div>
   </div>

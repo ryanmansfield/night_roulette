@@ -38,20 +38,46 @@
   padding:2px;
 
 }
-
+// booking form
 
 .booking-form {
   background-color: $mediumgrey;
   color: $black;
 }
 
-// slider style
+// wheel button
+
+.wheel-btn {
+  border: 1px, black, solid;
+}
+
+// venue buttons
+
+.venue_types_buttons {
+  justify-content: space-between;
+}
+
+// plus minus passenger
+
 
 .container-passengers {
   display: flex;
+  justify-content: center;
 }
 
-.foo-bar {
+.plus-minus {
+  display: flex;
+
+}
+
+.passenger-amount {
   margin: 100px;
 }
+
+.plus {
+font-size: 60px;
+}
+
+
+
 
