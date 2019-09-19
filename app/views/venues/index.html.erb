@@ -3,9 +3,6 @@
 <head>
   <title>Night Roulette</title>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script>
-    ScrollReveal({ reset: true });
-  </script>
 </head>
 <body>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);">
@@ -29,7 +26,8 @@
     </div>
   </div>
   <script>
-    ScrollReveal().reveal('.card', { delay: 300 })
+    ScrollReveal().reveal('.card', { delay: 300, reset: true});
+    ScrollReveal().reveal('.headline load-hidden', {delay: 500});
   </script>
 </body>
 </html>
