@@ -21,7 +21,8 @@
       <div class="cards">
         <% @venues.sample(12).each do |venue| %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= venue.picture %>);">
-            <%= venue.name %>
+              <div class="pic_text"><%= venue.name %></div>
+              <p> <%= venue.venue_type %></p>
           </div>
         <% end %>
       </div>
