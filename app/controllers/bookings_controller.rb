@@ -29,4 +29,3 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:date, :time, :passengers, venue_types: [])
   end
 end
-

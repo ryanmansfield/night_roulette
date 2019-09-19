@@ -3,9 +3,9 @@ require 'uber'
 class UberRides
   def initialize(attributes = {})
     @client = Uber::Client.new do |config|
-      config.server_token  = ENV['config.server_token']
-      config.client_id     = ENV['config.client_id']
-      config.client_secret = ENV['config.client_secret']
+      config.server_token  = ENV['UBER_SERVER_TOKEN']
+      config.client_id     = ENV['UBER_CLIENT_ID']
+      config.client_secret = ENV['UBER_CLIENT_SECRET']
       config.sandbox       = true
     end
     @product_id = attributes[:product_id]
