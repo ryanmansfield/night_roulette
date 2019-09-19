@@ -22,7 +22,7 @@
         <% @venues.sample(12).each do |venue| %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= venue.picture %>);">
               <div class="pic_text" style="text-align:center"><%= venue.name %></div>
-              <p> <%= venue.venue_type.capitalize %></p>
+                <div class="pic_text_2" style="text-align:center"> <%= venue.venue_type.capitalize %></div>
           </div>
         <% end %>
       </div>
