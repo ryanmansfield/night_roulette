@@ -15,11 +15,10 @@
               <!-- TODO change this button into the wheel and add javascript -->
             <%= f.button :submit, "SPIN THE WHEEL" %>
               <!-- This is our 3 booking filters -->
-            <%= f.input :restaurant,     as: :radio_buttons %>
-            <%= f.input :bar,            as: :radio_buttons %>
-            <%= f.input :nightclub,      as: :radio_buttons %>
+            <%=  f.collection_check_boxes :venue_types, [['restaurant', 'Restaurant'],
+            ['bar', 'Bar'], ['nightclub', 'Nightclub'] ], :first, :last %>
               <!-- This is our guest counts -->
-            <%= f.input[type=number] :passengers,      as: :radio_buttons %>
+            <%= f.input :passengers, label: 'Passengers Count', collection: 1..4, include_blank: false %>
 
           <% end %>
         </div>
@@ -28,6 +27,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 

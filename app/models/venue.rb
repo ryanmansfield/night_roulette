@@ -3,8 +3,8 @@ class Venue < ApplicationRecord
   has_many :users, through: :bookings
   validates :name, presence: true, uniqueness: true
   validates :location, presence: true
-  geocoded_by :location
-  after_validation :geocode, if: :will_save_change_to_location?
+  #geocoded_by :location
+  #after_validation :geocode, if: :will_save_change_to_location?
 
   def self.find_random(type)
     where(venue_type: type).order("RANDOM()").first
