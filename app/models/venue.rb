@@ -6,8 +6,8 @@ class Venue < ApplicationRecord
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
-  def self.find_random(type, user)
-    where(venue_type: type).where(user.prefs_sql).order("RANDOM()").first
+  def self.find_random(type)
+    where(venue_type: type).order("RANDOM()").first
   end
 
   def self.curated_for_user_count(user)

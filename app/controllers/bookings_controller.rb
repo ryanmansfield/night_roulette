@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @venue = Venue.find_random(params[:type], current_user)
+    @venue = Venue.find_random(params[:type])
     @booking = current_user.bookings.new(booking_params)
     @booking.venue = @venue
     @booking.time = Time.now
@@ -33,4 +33,3 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:date, :time)
   end
 end
-
