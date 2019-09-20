@@ -13,3 +13,23 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+.navbar-nav > li > a {
+  color: $lightgrey;
+}
+
+.nav-mobile {
+  height: 100vh;
+  width: 60vw;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+}
+
+.nav-mobile a {
+  margin-bottom: 30px;
+}
