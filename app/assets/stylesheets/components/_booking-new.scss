@@ -4,16 +4,14 @@
   padding: 150px 0;
 }
 
-.booking-new{
-  margin:10px auto;
-  color:white;
+.booking-new {
+  margin: 10px auto;
+  color: white;
 }
 
-.header-text{
+.header-text {
   padding: 20px auto;
-
 }
-
 
 // form
 .form-post {
@@ -22,8 +20,7 @@
   padding: 20px;
   border-radius: 5px;
   border: 1px solid grey;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1)
-  h1 {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) h1 {
     text-align: center;
     font-weight: bold;
     font-size: 25px;
@@ -58,21 +55,22 @@
     cursor: pointer;
   }
   &.active {
-  background: white;
-  color: black;
+    background: white;
+    color: black;
   }
 }
 
-.align-center{
-  justify-content:space-around;
+.align-center {
+  justify-content: space-around;
   align-items: baseline;
 }
 
-
 .plus {
-background-color: $darkgrey;
+  background-color: $darkgrey;
+  width: 48px;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 25px;
 }
-
-
-
-
