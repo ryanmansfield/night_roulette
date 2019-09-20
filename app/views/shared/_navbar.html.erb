@@ -6,18 +6,18 @@
         <li class="nav-item dropdown">
           <%= image_tag "dice.png", class: "configs dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu nav-sidebar dropdown-menu-left nav-mobile mx-0" aria-labelledby="navbarDropdown">
-            <%= link_to "Spin the wheel", new_booking_path, class: "nav-link nav-button" %>
-            <%= link_to "Settings", edit_user_registration_path, class: "nav-link nav-button" %>
-            <%= link_to "Previous Bookings", bookings_path, class: "nav-link nav-button" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link nav-button" %>
+            <%= link_to "Spin the wheel", new_booking_path, class: "nav-link" %>
+            <%= link_to "Settings", edit_user_registration_path, class: "nav-link" %>
+            <%= link_to "Previous Bookings", bookings_path, class: "nav-link" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </div>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Sign In", new_user_session_path, class: "nav-link nav-button" %>
+          <%= link_to "Signin", new_user_session_path, class: "nav-link nav-button" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Sing Up", new_user_registration_path, class: "nav-link nav-button" %>
+          <%= link_to "Signup", new_user_registration_path, class: "nav-link nav-button" %>
         </li>
       <% end %>
     </ul>
