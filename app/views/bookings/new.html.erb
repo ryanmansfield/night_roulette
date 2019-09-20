@@ -5,12 +5,6 @@
   <div class="booking-new">
     <div class="row" style="text-align: center;">
       <div class="header-text col-9" style="margin: 25px auto;">
-        <h1>Night Roulette</h1>
-        <p>Select you filters and spin the wheel</p>
-        <p>Please confirm this is your current location</p>
-
-
-
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -18,7 +12,26 @@
                 <h1>Select Your Preferences</h1>
                 <%= simple_form_for @booking do |f| %>
 
-                <%=  f.collection_check_boxes :venue_types, [['bar', 'Bar'], ['restaurant', 'Restaurant'], ['nightclub', 'Club'] ], :first, :last, {:item_wrapper_class => 'venue_types_buttons'} %>
+                <div class="form-group">
+                <label class="control-label check_boxes optional">Venue Types</label>
+                  <div class="category-choices">
+                    <span class="venue_types_buttons">
+                      <input type="checkbox" class="hidden" value="bar" name="booking[venue_types][]" id="booking_venue_types_bar">
+                      <label class="category-choice" for="booking_venue_types_bar">Bar</label>
+                    </span>
+
+                    <span class="venue_types_buttons">
+                      <input type="checkbox" class="hidden" value="restaurant" name="booking[venue_types][]" id="booking_venue_types_restaurant">
+                      <label class="category-choice" for="booking_venue_types_restaurant">Restaurant</label>
+                    </span>
+
+                    <span class="venue_types_buttons">
+                      <input type="checkbox" class="hidden" value="nightclub" name="booking[venue_types][]" id="booking_venue_types_nightclub">
+                      <label class="category-choice" for="booking_venue_types_nightclub">Club</label>
+                    </span>
+                  </div>
+                </div>
+
 
                 <div class="row">
                   <div class="col-xs-3">
@@ -31,20 +44,12 @@
                     <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
                   </div>
                 </div>
-                  <!-- Inject categories here -->
-
                   <%= f.button :submit, "place your bets", class: "btn btn-primary" %>
                 <% end %>
               </div>
             </div>
           </div>
         </div>
-
-
-
-
-
-
       </div>
     </div>
   </div>

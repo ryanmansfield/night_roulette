@@ -7,9 +7,6 @@
 .booking-new{
   margin:10px auto;
   color:white;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 */
-  position: relative;
 }
 
 .header-text{
@@ -18,36 +15,9 @@
 }
 
 
-.landing-page-card{
-  background-color: #F1F2EF;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 33px;
-  height: 257px;
-  color: black;
-  margin: 0 auto;
-  text-align:left;
-}
-
-.landing-page-card-instruction .row{
-  margin: 10px auto;
-  text-align: left;
-  padding: 20px;
-}
-
-.landing-page-card-instruction{
-  padding: 10px;
-}
-
-.landing-page-card-instruction i{
-  font-family: 'Montserrat', sans-serif;
-  padding:2px;
-
-}
-
-
 // form
 .form-post {
-  background: white;
+  background: black;
   margin-top: 50px;
   padding: 20px;
   border-radius: 5px;
@@ -66,55 +36,36 @@
   }
 }
 
+// Checkboxes design
+.category-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
 
-// booking form
-
-// .booking-form {
-//   background-color: $mediumgrey;
-//   color: black;
-//   padding: 16px;
-//   border-radius: 4px;
-// }
-
-// venue buttons
-
-// .venue_types_buttons {
-//   justify-content: space-between;
-
-//   label {
-//     padding: 4px;
-//   }
-// }
-
-// plus minus passenger
+.category-choice {
+  background: #b7b7b7;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: .4;
+  flex: 0 0 30%;
+  text-align: center;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  &.active {
+  background: yellow;
+  color: white;
+  opacity: 1;
+  }
+}
 
 
-// .container-passengers {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .plus-minus {
-//   display: flex;
-
-// }
-
-// .stupid {
-//   margin: 21px;
-// }
-
-// .form-control {
-//   width: 35px;
-// }
-
-// .plus {
-// border-radius: 50%;
-// background-color: $red;
-// // background-image: url("https://media.istockphoto.com/photos/red-poker-chip-picture-id185013532?k=6&m=185013532&s=612x612&w=0&h=5STKVnzZcIaeaztSAWAMQmaIZk9YeYxn900zB9KO2G0=");
-// // background-position: cover;
-// height: 60px;
-// width: 60px;
-// }
+.plus {
+background-color: $darkgrey;
+}
 
 
 
