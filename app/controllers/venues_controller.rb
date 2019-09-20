@@ -5,6 +5,11 @@ class VenuesController < ApplicationController
 
   def index
     @venues = Venue.all
+    @bars = Venue.where(venue_type: "bar")
+    @restaurants = Venue.where(venue_type: "restaurant")
+    @nightclubs = Venue.where(venue_type: "nightclub")
+    @random_first = [@bars[0], @restaurants[1], @nightclubs[1], @bars[1]]
+    @random_last = [@restaurants[2], @bars[3], @nightclubs[2], @restaurants[2]]
 
     #@aphigh = GooglePlaces.new.find
   end
