@@ -1,30 +1,29 @@
-<div class="navbar navbar-expand navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "logo.png" %>
-  <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
+<div class="navbar navbar-expand navbar-light navbar-lewagon navbar-grid">
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right nav-mobile" aria-labelledby="navbarDropdown">
-            <%= link_to "Spin the wheel", new_booking_path, class: "nav-link" %>
-            <%= link_to "Settings", edit_user_registration_path, class: "nav-link" %>
-            <%= link_to "Previous Bookings", bookings_path, class: "nav-link" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          <%= image_tag "dice.png", class: "configs dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu nav-sidebar dropdown-menu-left nav-mobile mx-0" aria-labelledby="navbarDropdown">
+            <%= link_to "Spin the wheel", new_booking_path, class: "nav-link nav-button" %>
+            <%= link_to "Settings", edit_user_registration_path, class: "nav-link nav-button" %>
+            <%= link_to "Previous Bookings", bookings_path, class: "nav-link nav-button" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link nav-button" %>
           </div>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Sign In", new_user_session_path, class: "nav-link nav-button" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sing Up", new_user_registration_path, class: "nav-link nav-button" %>
         </li>
       <% end %>
     </ul>
   </div>
+
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "logo.png" %>
+  <% end %>
 </div>
