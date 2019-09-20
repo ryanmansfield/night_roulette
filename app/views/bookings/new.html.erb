@@ -17,7 +17,7 @@
                 <%= simple_form_for @booking do |f| %>
 
                 <div class="form-group">
-                <label class="control-label check_boxes optional">Venue Types</label>
+
                   <input type="hidden" name="booking[category_ids][]" value="">
                   <div class="category-choices">
                     <span class="venue_types_buttons col-12">
@@ -36,9 +36,10 @@
                     </span>
                   </div>
                 </div>
-
-
-                <div class="row justify-content-center">
+                <div>
+                  <p>Number of people</p>
+                </div>
+                <div class="row align-center">
                   <div class="col-xs-2">
                     <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
                   </div>
