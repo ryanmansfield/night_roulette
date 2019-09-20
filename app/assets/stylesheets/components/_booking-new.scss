@@ -29,9 +29,12 @@
     margin-top: 0px;
   }
   .btn {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     font-weight: bold;
+    color: white;
+    border: 2px solid $lightgrey;
+    border-radius: 3px;
   }
 }
 
