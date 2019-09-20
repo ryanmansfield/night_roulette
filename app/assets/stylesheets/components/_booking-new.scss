@@ -7,11 +7,16 @@
 .booking-new{
   margin:10px auto;
   color:white;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
 }
 
 .header-text{
   padding: 20px auto;
+
 }
+
 
 .landing-page-card{
   background-color: #F1F2EF;
@@ -38,45 +43,78 @@
   padding:2px;
 
 }
+
+
+// form
+.form-post {
+  background: white;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #666666;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+  }
+}
+
+
 // booking form
 
-.booking-form {
-  background-color: $mediumgrey;
-  color: $black;
-}
-
-// wheel button
-
-.wheel-btn {
-  border: 1px, black, solid;
-}
+// .booking-form {
+//   background-color: $mediumgrey;
+//   color: black;
+//   padding: 16px;
+//   border-radius: 4px;
+// }
 
 // venue buttons
 
-.venue_types_buttons {
-  justify-content: space-between;
-}
+// .venue_types_buttons {
+//   justify-content: space-between;
+
+//   label {
+//     padding: 4px;
+//   }
+// }
 
 // plus minus passenger
 
 
-.container-passengers {
-  display: flex;
-  justify-content: center;
-}
+// .container-passengers {
+//   display: flex;
+//   justify-content: center;
+// }
 
-.plus-minus {
-  display: flex;
+// .plus-minus {
+//   display: flex;
 
-}
+// }
 
-.passenger-amount {
-  margin: 100px;
-}
+// .stupid {
+//   margin: 21px;
+// }
 
-.plus {
-font-size: 60px;
-}
+// .form-control {
+//   width: 35px;
+// }
+
+// .plus {
+// border-radius: 50%;
+// background-color: $red;
+// // background-image: url("https://media.istockphoto.com/photos/red-poker-chip-picture-id185013532?k=6&m=185013532&s=612x612&w=0&h=5STKVnzZcIaeaztSAWAMQmaIZk9YeYxn900zB9KO2G0=");
+// // background-position: cover;
+// height: 60px;
+// width: 60px;
+// }
 
 
 

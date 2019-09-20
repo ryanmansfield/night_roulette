@@ -1,39 +1,54 @@
 <div>
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1559896276-8189f895c02e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
   </div>
+
   <div class="booking-new">
     <div class="row" style="text-align: center;">
       <div class="header-text col-9" style="margin: 25px auto;">
         <h1>Night Roulette</h1>
         <p>Select you filters and spin the wheel</p>
-
         <p>Please confirm this is your current location</p>
 
 
-        <div class="booking-form">
-          <%= simple_form_for @booking do |f| %>
-              <!-- TODO change this button into the wheel and add javascript -->
-            <%= f.button :submit, "SPIN THE WHEEL" %>
-              <!-- This is our 3 booking filters -->
-            <div class="container">
 
-              <div>
-                <%=  f.collection_radio_buttons :venue_types, [['restaurant', 'Restaurant'],
-                ['bar', 'Bar'], ['nightclub', 'Nightclub'] ], :first, :last, {:item_wrapper_class => 'venue_types_buttons'} %>
-              </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+              <div class="form-post">
+                <h1>Select Your Preferences</h1>
+                <%= simple_form_for @booking do |f| %>
 
-              <div class="container-passengers">
-                <!-- This is our guest counts -->
-                <div class="plus-minus">
+                <%=  f.collection_check_boxes :venue_types, [['bar', 'Bar'], ['restaurant', 'Restaurant'], ['nightclub', 'Club'] ], :first, :last, {:item_wrapper_class => 'venue_types_buttons'} %>
+
+                <div class="row">
+                  <div class="col-xs-3">
                     <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
+                  </div>
+                  <div class="col-xs-6">
                     <%= f.input :passengers, classes: 'passenger-amount', label: 'Passengers Count', input_html: {value: '1', disabled: true} %>
+                  </div>
+                  <div class="col-xs-3">
                     <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
+                  </div>
                 </div>
+                  <!-- Inject categories here -->
+
+                  <%= f.button :submit, "place your bets", class: "btn btn-primary" %>
+                <% end %>
+              </div>
             </div>
-          <% end %>
+          </div>
         </div>
+
+
+
+
+
+
       </div>
     </div>
   </div>
 </div>
+
+
 

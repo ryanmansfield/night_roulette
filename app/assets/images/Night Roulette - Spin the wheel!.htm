@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:3000/bookings/new -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Night Roulette - Spin the wheel!</title>
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="KeoN6NYUNFfno5rsWIu9fORG4gB1vSlWI+duQQXpUthUI9edBMOZY55VS00g5nJyebEXsZnVyfoJqYuNlTS2yw==">
+    <meta name="action-cable-url" content="/cable">
+    <link rel="stylesheet" media="all" href="./Night Roulette - Spin the wheel!_files/application-edcf018e20b66a41e6f3c4e0c3df016fde5a4c055fee270489daeec40e73d432.css">
+     <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+  </head>
+  <body cz-shortcut-listen="true">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="http://localhost:3000/bookings/new#">
+    <img src="./Night Roulette - Spin the wheel!_files/logo-f1d9d24296e6c5e8cf7b69ccffe8bda596ce6ac56bb8c1a1282a2036be5e93ef.png">
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:3000/bookings/new#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/bookings/new#">Messages</a>
+        </li>
+        <li class="nav-item dropdown">
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./Night Roulette - Spin the wheel!_files/ssaunier">
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="http://localhost:3000/users/edit">Settings</a>
+            <a class="dropdown-item" href="http://localhost:3000/bookings">Previous Bookings</a>
+            <a class="dropdown-item" rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">Log out</a>
+          </div>
+        </li>
+    </ul>
+  </div>
+</div>
+
+    
+    <div>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1559896276-8189f895c02e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80);">
+  </div>
+
+  <div class="booking-new">
+    <div class="row" style="text-align: center;">
+      <div class="header-text col-9" style="margin: 25px auto;">
+        <h1>Night Roulette</h1>
+        <p>Select you filters and spin the wheel</p>
+
+        <div class="container-roulette-wheel">
+          
+        </div>
+
+        <p>Please confirm this is your current location</p>
+
+
+        <div class="booking-form">
+          <form class="simple_form new_booking" id="new_booking" novalidate="novalidate" action="http://localhost:3000/bookings" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="KeoN6NYUNFfno5rsWIu9fORG4gB1vSlWI+duQQXpUthUI9edBMOZY55VS00g5nJyebEXsZnVyfoJqYuNlTS2yw==">
+              <!-- TODO change this button into the wheel and add javascript -->
+
+              <!-- This is our 3 booking filters -->
+            <div class="container">
+
+              <div>
+                <input type="hidden" name="booking[venue_types][]" value=""><span class="venue_types_buttons"><input type="checkbox" value="bar" name="booking[venue_types][]" id="booking_venue_types_bar"><label class="collection_check_boxes" for="booking_venue_types_bar">Bar</label></span><span class="venue_types_buttons"><input type="checkbox" value="restaurant" name="booking[venue_types][]" id="booking_venue_types_restaurant"><label class="collection_check_boxes" for="booking_venue_types_restaurant">Restaurant</label></span><span class="venue_types_buttons"><input type="checkbox" value="nightclub" name="booking[venue_types][]" id="booking_venue_types_nightclub"><label class="collection_check_boxes" for="booking_venue_types_nightclub">Club</label></span>
+              </div>
+
+              <div class="container-passengers">
+                <!-- This is our guest counts -->
+                <div class="plus-minus">
+                    <div class="stupid">
+
+                      <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
+                    </div>
+
+                    <div class="form-group integer optional booking_passengers"><label class="form-control-label integer optional" for="booking_passengers">Passengers Count</label><input class="form-control numeric integer optional" value="1" disabled="disabled" type="number" step="1" name="booking[passengers]" id="booking_passengers"></div>
+                    <div class="stupid">
+
+                      <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit" name="commit" value="place your bets" class="btn" data-disable-with="place your bets">
+
+        </div></form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <script src="./Night Roulette - Spin the wheel!_files/application-f2d82224cf24c078cec860b3a782d2599e8da943f63d6fd3f8a81f66c66f30da.js"></script>
+    <script src="./Night Roulette - Spin the wheel!_files/application-5271b7513a0e5e4df23b.js"></script>
+  
+
+</div></body></html>
