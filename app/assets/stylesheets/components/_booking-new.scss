@@ -21,6 +21,8 @@
   margin-top: 50px;
   padding: 20px;
   border-radius: 5px;
+  border: 1px solid grey;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1)
   h1 {
     text-align: center;
     font-weight: bold;
@@ -45,10 +47,10 @@
 }
 
 .category-choice {
-  background: #b7b7b7;
+  background: $darkgrey;
   padding: 20px;
   border-radius: 5px;
-  opacity: .4;
+  color: #b7b7b7;
   flex: 0 0 30%;
   text-align: center;
   &:hover {
@@ -56,9 +58,8 @@
     cursor: pointer;
   }
   &.active {
-  background: yellow;
-  color: white;
-  opacity: 1;
+  background: white;
+  color: black;
   }
 }
 
