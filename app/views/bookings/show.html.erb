@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <section class="hero">
-   <h1>Brittany's Night Roulette</h1>
+   <h1><%= @venue.name %></h1>
 </section>
 <section class="content">
    <section class="add-margin-bottom">
@@ -20,7 +20,7 @@
          </div>
          <div class="row trip-details">
           <div class="venue-details col-9" style="background: url(bar1.jpg);">
-            <p>Brittany's Night Roulette Destination</p>
+            <p><%= @venue.name %></p>
             <div class=" star-rating">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -40,6 +40,8 @@
           </div>
 
          </div>
+         <div class="btn btn-primary share-button">Share with your friends</div>
+
       </div>
    </section>
 </section>

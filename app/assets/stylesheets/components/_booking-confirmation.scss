@@ -5,7 +5,7 @@ body .hero {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url("bar1.jpg");
+  background: url('bar1.jpg');
   background-size: cover;
   height: 80vh;
   width: 100vw;
@@ -33,10 +33,10 @@ body .hero h1 {
 }
 body .content {
   position: absolute;
-  color:white;
+  color: white;
   z-index: 1000;
   top: 80vh;
-  background: #0F0F0F;
+  background: #0f0f0f;
   width: 100%;
   box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.15);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -47,14 +47,18 @@ body .content {
 }
 
 .add-margin-bottom {
-  margin-bottom: 60px;
+  height: 100vh;
+
+  .container {
+    display: grid;
+  }
 }
 
 .ct-section_header {
   text-align: center;
   padding-top: 40px;
-  justify-content:center;
-  align-items:baseline;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .ct-section_header h2 {
@@ -72,7 +76,7 @@ body .content {
   padding-bottom: 17px;
   padding-bottom: 1.7rem;
   font-family: 'Roboto Condensed', sans-serif;
-  color:white;
+  color: white;
 }
 
 .ct-section_header.ct-section_header--type2 .ct-section_header-description {
@@ -103,10 +107,33 @@ body .content {
   margin-bottom: 3rem;
 }
 
-.trip-details{
-  justify-content:center;
+.trip-details {
+  justify-content: center;
+  padding-top: 30px;
 }
 
-.venue-details{
-      border: 1px solid white;
+.venue-details {
+  border: 1px solid white;
+  padding: 50px 30px;
+}
+
+.pricing-details {
+  margin-top: 10px;
+}
+
+.hours {
+  margin-top: 20px;
+}
+
+.share-button {
+  justify-self: center;
+  margin-top: 60px;
+  align-self: center;
+  height: 70px;
+  width: 80%;
+  background-color: $lightgrey;
+  color: $black;
+  display: grid;
+  align-content: center;
+  border-radius: 12px;
 }
