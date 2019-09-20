@@ -1,10 +1,14 @@
+<head>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js">
+  </script>
+</head>
 <div>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1559896276-8189f895c02e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
   </div>
 
   <div class="booking-new">
     <div class="row" style="text-align: center;">
-      <div class="header-text col-9" style="margin: 25px auto;">
+      <div class="header-text col-11" style="margin: 25px auto;">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -13,37 +17,38 @@
                 <%= simple_form_for @booking do |f| %>
 
                 <div class="form-group">
-                <label class="control-label check_boxes optional">Venue Types</label>
+                  <input type="hidden" name="booking[venue_types][]" value="">
                   <div class="category-choices">
-                    <span class="venue_types_buttons">
-                      <input type="checkbox" class="hidden" value="bar" name="booking[venue_types][]" id="booking_venue_types_bar">
-                      <label class="category-choice" for="booking_venue_types_bar">Bar</label>
+                    <span class="venue_types_buttons col-12">
+                      <input type="hidden" class="hidden" value="bar" name="booking[venue_types][]" id="booking_venue_types_bar">
+                      <label class="category-choice col-12" for="booking_venue_types_bar">Bar</label>
                     </span>
 
-                    <span class="venue_types_buttons">
-                      <input type="checkbox" class="hidden" value="restaurant" name="booking[venue_types][]" id="booking_venue_types_restaurant">
-                      <label class="category-choice" for="booking_venue_types_restaurant">Restaurant</label>
+                    <span class="venue_types_buttons col-12">
+                      <input type="hidden" class="hidden" value="restaurant" name="booking[venue_types][]" id="booking_venue_types_restaurant">
+                      <label class="category-choice col-12" for="booking_venue_types_restaurant">Restaurant</label>
                     </span>
 
-                    <span class="venue_types_buttons">
-                      <input type="checkbox" class="hidden" value="nightclub" name="booking[venue_types][]" id="booking_venue_types_nightclub">
-                      <label class="category-choice" for="booking_venue_types_nightclub">Club</label>
+                    <span class="venue_types_buttons col-12">
+                      <input type="hidden" class="hidden" value="nightclub" name="booking[venue_types][]" id="booking_venue_types_nightclub">
+                      <label class="category-choice col-12" for="booking_venue_types_nightclub">Club</label>
                     </span>
                   </div>
                 </div>
-
-
-                <div class="row">
-                  <div class="col-xs-3">
+                <div>
+                  <p>Number of people</p>
+                </div>
+                <div class="row align-center">
+                  <div class="col-xs-2">
                     <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
                   </div>
-                  <div class="col-xs-6">
-                    <%= f.input :passengers, classes: 'passenger-amount', label: 'Passengers Count', input_html: {value: '1', disabled: true} %>
+                  <div class="col-xs-5">
+                    <%= f.input :passengers, classes: 'passenger-amount', label: false, input_html: {value: '1', disabled: true} %>
                   </div>
-                  <div class="col-xs-3">
+                  <div class="col-xs-2">
                     <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
                   </div>
-                </div>
+
                   <%= f.button :submit, "place your bets", class: "btn btn-primary" %>
                 <% end %>
               </div>
@@ -54,6 +59,7 @@
     </div>
   </div>
 </div>
+
 
 
 

@@ -17,8 +17,3 @@ function decreasePassengerAmount () {
     document.getElementById('booking_passengers').stepDown();
 }
 
-$(document).ready(function(){
-  $(".category-choice").click(function(){
-    $(this).toggleClass("active");
-  });
-});
