@@ -14,9 +14,9 @@ class Booking < ApplicationRecord
   private
 
   def assign_random_venue
-    @venue_types = ['restaurant', 'bar', 'nightclub'] if @venue_types.blank?
+    @venue_types = ['restaurant', 'bar', 'nightclub'] if @venue_types[0].empty?
 
-    self.venue = Venue.find_random(venue_types)
+    self.venue = Venue.find_random(@venue_types)
     self.time = Time.now
     self.date = Date.today
   end
