@@ -48,6 +48,10 @@ body .content {
 
 .add-margin-bottom {
   height: 100vh;
+
+  .container {
+    display: grid;
+  }
 }
 
 .ct-section_header {
@@ -122,5 +126,14 @@ body .content {
 }
 
 .share-button {
-  margin-top: 40px;
+  justify-self: center;
+  margin-top: 60px;
+  align-self: center;
+  height: 70px;
+  width: 80%;
+  background-color: $lightgrey;
+  color: $black;
+  display: grid;
+  align-content: center;
+  border-radius: 12px;
 }
