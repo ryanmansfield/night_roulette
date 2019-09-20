@@ -39,9 +39,10 @@
   font-weight: bold;
   transition: background 0.3s ease;
   border: 1px solid #fff;
+  opacity: .8;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
   color: white;
+  opacity:1;
 }
