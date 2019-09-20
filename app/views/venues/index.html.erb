@@ -19,7 +19,7 @@
   </div>
     <div class="container">
       <div class="cards">
-        <% @venues.sample(12).each do |venue| %>
+        <% @random_first.each do |venue| %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= venue.picture %>);">
               <div class="pic_text" style="text-align:center"><%= venue.name %></div>
                 <div class="pic_text_2" style="text-align:center"> <%= venue.venue_type.capitalize %></div>
@@ -28,10 +28,6 @@
       </div>
     </div>
   </div>
-  <script>
-    ScrollReveal().reveal('.card', { delay: 300, reset: true});
-    ScrollReveal().reveal('.headline load-hidden', {delay: 500});
-  </script>
   <div class="row col-12" style="color: white;">
     <div class="landing-page-card-instruction">
       <div class="row col-9 mx-5 px-3">
@@ -43,6 +39,10 @@
       </div>
     </div>
   </div>
+  <script>
+    ScrollReveal().reveal('.card', { delay: 300, reset: true});
+    ScrollReveal().reveal('.headline load-hidden', {delay: 500});
+  </script>
 </body>
 </html>
 

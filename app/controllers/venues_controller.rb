@@ -5,6 +5,9 @@ class VenuesController < ApplicationController
 
   def index
     @venues = Venue.all
+    @random_first = @venues[1..4]
+    @random_last = @venues[5..9]
+
 
     #@aphigh = GooglePlaces.new.find
   end
