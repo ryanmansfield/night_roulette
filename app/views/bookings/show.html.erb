@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @venue.picture %>);">
-   <h1>You're on your way to <strong><%= @venue.name %></strong>, Ryan!</h1>
+   <h1>You're on your way to <strong><%= @venue.name %></strong>, <%= current_user.name %></h1>
 </section>
 <section class="content">
    <section class="add-margin-bottom">
