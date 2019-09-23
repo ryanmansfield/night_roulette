@@ -13,7 +13,7 @@ Venue.create!(
     name: 'Bar Urca',
     location: '205 Rua Cândido Gaffrée, Urca Rio de Janeiro, 22291-080, Brazil',
     picture: 'https://lh5.googleusercontent.com/p/AF1QipPLgmEhwzn_bYyJ2b5zK4Ndf4GWvGhzY-KzL2uU=w426-h240-k-no',
-    venue_type: 'bar'
+    venue_type: 'bar',
     cool_facts: ['The food is great', 'Order a caipirinha', 'The views are awesome']
 )
 #2
