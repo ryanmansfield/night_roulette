@@ -4,32 +4,36 @@
   padding: 150px 0;
 }
 
-.landing-page-content{
-  margin:10px auto;
-  color:white;
+.landing-page-content {
+  margin: 10px auto;
+  color: white;
 }
 
-.header-text{
+.landing-page-content .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.header-text {
   padding: 0px auto;
 }
 
-.landing-page-card-instruction .row{
+.landing-page-card-instruction .row {
   margin: 10px auto;
   text-align: left;
   padding: 20px;
 }
 
-.landing-page-card-instruction{
+.landing-page-card-instruction {
   padding: 10px;
 }
 
-.landing-page-card-instruction i{
+.landing-page-card-instruction i {
   font-family: 'Montserrat', sans-serif;
-  padding:4px;
+  padding: 4px;
 }
-.landing-page-card-instruction a{
+.landing-page-card-instruction a {
   margin: 10px auto;
-
 }
 
 .btn-gradient {
@@ -39,10 +43,10 @@
   font-weight: bold;
   transition: background 0.3s ease;
   border: 1px solid #fff;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .btn-gradient:hover {
   color: white;
-  opacity:1;
+  opacity: 1;
 }
