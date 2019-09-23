@@ -1,0 +1,5 @@
+meta_product_name: "Night Roulette"
+meta_title: "Night Roulette - Spin the wheel and go"
+meta_description: "Disovering new places by random"
+meta_image: "logo.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
