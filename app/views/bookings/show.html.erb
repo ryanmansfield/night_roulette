@@ -1,5 +1,5 @@
 <section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @venue.picture %>);">
-   <h1>We've selected <strong><%= @venue.name %></strong> for you, <%= current_user.name %></h1>
+   <h1>We've selected <strong><%= @venue.name %></strong> for you, <%= current_user.name.capitalize %></h1>
 </section>
 <section class="content">
    <section class="add-margin-bottom">
@@ -20,9 +20,10 @@
          <div class="row trip-details">
           <div class="venue-details col-9" style="background: url(bar1.jpg);">
             <h1> Cool facts: </h1>
-            <p><li>The decor was inspired by Carmen Miranda's fabulous style </li></p>
-            <p><li>It is well-known for its caipirinhas with a twist </li></p>
-            <p><li> Grab a seat by the window for an impressive panoramic view </li></p></br>
+            <% @facts.each do |fact| %>
+            <p><li> <%= fact %> </li></p>
+            <% end %>
+            </br>
             <div class=" star-rating">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>

@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2019_09_23_172530) do
     t.float "latitude"
     t.float "longitude"
     t.string "venue_type"
-    t.string "cool_facts"
+    t.string "cool_facts", default: [], array: true
   end
 
 end
