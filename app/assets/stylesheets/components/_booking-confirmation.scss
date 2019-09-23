@@ -114,6 +114,7 @@ body .content {
 
 .venue-details {
   border: 1px solid white;
+  border-radius: 4px;
   padding: 50px 30px;
 }
 
@@ -135,5 +136,5 @@ body .content {
   color: $black;
   display: grid;
   align-content: center;
-  border-radius: 12px;
+  border-radius: 4px;
 }

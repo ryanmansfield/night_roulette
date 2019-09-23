@@ -13,6 +13,16 @@
   padding: 0px auto;
 }
 
+.header-text h1{
+  font-family: $headers-font;
+  font-weight: 600;
+}
+.header-text p{
+  font-family: $body-font;
+  font-weight: 300;
+  opacity: .8;
+}
+
 .landing-page-card-instruction .row{
   margin: 10px auto;
   text-align: left;
