@@ -1,23 +1,22 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @venue.picture %>);">
-   <h1>You're on your way to <strong><%= @venue.name %></strong>, Ryan!</h1>
+   <h1>We've selected <strong><%= @venue.name %></strong> for you, <%= current_user.name %></h1>
 </section>
 <section class="content">
    <section class="add-margin-bottom">
       <div class="container">
          <div class="row ct-section_header ct-section_header--type2">
 <!--           <h1>Get ready for the time of your life.</h1>
- -->            <p class="col-6">Uber arrival</p>
                 <h2 class="col-6">9:00</h2>
             <div class="col-12ct-section_header-description">
             </div>
+             <p class="col-6">Uber arrival</p>
             <div class="clearfix">
                &nbsp;
             </div>
-            <div class="ct-section_header-separator">
+         <div class="ct-section_header-separator">
                &nbsp;
             </div>
-         </div>
+     -->      </div>
          <div class="row trip-details">
           <div class="venue-details col-9" style="background: url(bar1.jpg);">
             <h1> Cool facts: </h1>
@@ -39,7 +38,7 @@
 
               </div>
             </div>
-            <p class="hours">Open until 2:00 am</p>
+            <p class="hours">Open until <%= @venue.hours %></p>
           </div>
 
          </div>
