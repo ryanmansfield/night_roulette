@@ -32,9 +32,13 @@
 .landing-page-card-instruction{
   padding: 10px;
 }
+.landing-page-card-instruction h3{
+  font-family: $headers-font;
+  padding:4px;
+}
 
-.landing-page-card-instruction i{
-  font-family: 'Montserrat', sans-serif;
+.landing-page-card-instruction .add-body-font{
+  font-family: $body-font;
   padding:4px;
 }
 .landing-page-card-instruction a{
@@ -50,6 +54,7 @@
   transition: background 0.3s ease;
   border: 1px solid #fff;
   opacity: .8;
+  font-family: $body-font;
 }
 
 .btn-gradient:hover {
