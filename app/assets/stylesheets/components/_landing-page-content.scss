@@ -18,6 +18,17 @@
   padding: 0px auto;
 }
 
+<<<<<<< HEAD
+.header-text h1{
+  font-family: $headers-font;
+  font-weight: 600;
+}
+.header-text p{
+  font-family: $body-font;
+  font-weight: 300;
+  opacity: .8;
+}
+
 .landing-page-card-instruction .row {
   margin: 10px auto;
   text-align: left;
@@ -27,11 +38,15 @@
 .landing-page-card-instruction {
   padding: 10px;
 }
-
-.landing-page-card-instruction i {
-  font-family: 'Montserrat', sans-serif;
-  padding: 4px;
+.landing-page-card-instruction h3{
+  font-family: $headers-font;
+  padding:4px;
 }
+
+.landing-page-card-instruction .add-body-font{
+  font-family: $body-font;
+  padding:4px;
+
 .landing-page-card-instruction a {
   margin: 10px auto;
 }
@@ -43,7 +58,10 @@
   font-weight: bold;
   transition: background 0.3s ease;
   border: 1px solid #fff;
-  opacity: 0.8;
+  opacity: .8;
+  font-family: $body-font;
+  font-weight:bolder;
+
 }
 
 .btn-gradient:hover {
