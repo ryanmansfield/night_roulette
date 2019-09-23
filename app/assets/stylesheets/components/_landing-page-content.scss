@@ -45,6 +45,7 @@
 .landing-page-card-instruction .add-body-font{
   font-family: $body-font;
   padding:4px;
+}
 
 .landing-page-card-instruction a {
   margin: 10px auto;
@@ -60,10 +61,9 @@
   opacity: .8;
   font-family: $body-font;
   font-weight:bolder;
-
 }
 
-.btn-gradient:hover {
+.btn-gradient:hover{
   color: white;
   opacity: 1;
 }
