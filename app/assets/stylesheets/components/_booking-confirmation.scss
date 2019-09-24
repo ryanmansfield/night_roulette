@@ -30,7 +30,7 @@ body .hero h1 {
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
   max-width: 25rem;
   margin: 30vh auto 0;
-  font-weight:800
+  font-weight: 800;
 }
 body .content {
   position: absolute;
@@ -49,10 +49,6 @@ body .content {
 
 .add-margin-bottom {
   height: 120vh;
-
-  .container {
-    display: grid;
-  }
 }
 
 .ct-section_header {
@@ -114,14 +110,13 @@ body .content {
   background-color: $black;
 }
 
-
 .venue-details {
   border: 1px solid white;
   border-radius: 4px;
   padding: 50px 30px;
 }
 
-.venue-details h1{
+.venue-details h1 {
   font-family: $body-font;
 }
 .pricing-details {
@@ -146,7 +141,7 @@ body .content {
   font-weight: bolder;
 }
 
-.share-button:hover{
+.share-button:hover {
   background-color: $lightgrey;
   color: black;
 }

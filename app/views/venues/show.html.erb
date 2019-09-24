@@ -3,3 +3,19 @@
 <h2>Here's where you're going:</h2>
 <h2> <%= @venue.name %> </h2>
 <h3> <%= @venue.location %> </h3>
+<h3> <%= @venue.rating %> out of <%= @venue.times_rated %> votes </h3>
+<br>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rating-modal">
+  Rate this venue
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="rating-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <%= render 'rating-form', venue: @venue  %>
+    </div>
+  </div>
+</div>
