@@ -14,15 +14,26 @@
       <div class="container">
       <div class="cards">
         <% @random_first.each do |venue| %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
-            <div class="pic_text" style="text-align:center"><%= venue.name %></div>
-            <% if venue.venue_type == 'restaurant' %>
-              <div class="text-center"><i class="fas fa-utensils"></i></div>
-            <% elsif venue.venue_type == 'bar' %>
-              <div class="text-center"><i class="fas fa-beer"></i></div>
-            <% elsif venue.venue_type == 'nightclub' %>
-              <div class="text-center"><i class="fas fa-cocktail"></i></div>
-            <% end %>
+          <div class="card">
+            <div class="content-flip">
+              <div class="front-flip" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
+                <div class="pic_text" style="text-align:center"><%= venue.name %></div>
+                <% if venue.venue_type == 'restaurant' %>
+                  <div class="text-center"><i class="fas fa-utensils"></i></div>
+                <% elsif venue.venue_type == 'bar' %>
+                  <div class="text-center"><i class="fas fa-beer"></i></div>
+                <% elsif venue.venue_type == 'nightclub' %>
+                  <div class="text-center"><i class="fas fa-cocktail"></i></div>
+                <% end %>
+              </div>
+              <div class="back-flip">
+                <% venue.cool_facts.each do |fact| %>
+                <h3> Cool facts </h3>
+                <p><li> <%= fact %></li> </p>
+                <% end %>
+                <p> <%= venue.location %></p>
+              </div>
+            </div>
           </div>
         <% end %>
       </div>
