@@ -19,7 +19,7 @@
   </div>
     <div class="container">
       <div class="cards">
-        <% @random_last.each do |venue| %>
+        <% @random_first.each do |venue| %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
             <div class="pic_text" style="text-align:center"><%= venue.name %></div>
             <% if venue.venue_type == 'restaurant' %>
@@ -40,7 +40,6 @@
         <h3 style="margin:15px;">How it Works</h3>
           <p> Select your Preferences </p>
           <p> Spin the Wheel </p>
-          <p> Share with Friends </p>
           <p> Have the Time of you Life </p>
           <%= link_to "Let's go", new_booking_path, class: "btn btn-gradient" %>
       </div>
