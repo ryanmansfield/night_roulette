@@ -19,10 +19,16 @@
   </div>
     <div class="container">
       <div class="cards">
-        <% @random_first.each do |venue| %>
+        <% @random_last.each do |venue| %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
-              <div class="pic_text" style="text-align:center"><%= venue.name %></div>
-                <div class="pic_text_2" style="text-align:center"> <%= venue.venue_type.capitalize %></div>
+            <div class="pic_text" style="text-align:center"><%= venue.name %></div>
+            <% if venue.venue_type == 'restaurant' %>
+              <div class="text-center"><i class="fas fa-utensils"></i></div>
+            <% elsif venue.venue_type == 'bar' %>
+              <div class="text-center"><i class="fas fa-beer"></i></div>
+            <% elsif venue.venue_type == 'nightclub' %>
+              <div class="text-center"><i class="fas fa-cocktail"></i></div>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -32,22 +38,26 @@
     <div class="landing-page-card-instruction">
       <div class="row col-10">
         <h3 style="margin:15px;">How it Works</h3>
-          <p class="add-body-font">1. Select your Preferences </i>
-          <p class="add-body-font">2. Spin the Wheel</p>
-          <p class="add-body-font">3. Share with friends!</p>
-          <p class="add-body-font">4.Have the Time of Your Life</p>
+          <p> Select your Preferences </p>
+          <p> Spin the Wheel </p>
+          <p> Share with Friends </p>
+          <p> Have the Time of you Life </p>
           <%= link_to "Let's go", new_booking_path, class: "btn btn-gradient" %>
       </div>
     </div>
   </div>
-   <div class="container">
+    <div class="container">
       <div class="cards">
         <% @random_last.each do |venue| %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= venue.picture %>);">
-            <div class="pic_text" style="text-align:center"><%= venue.name %>
-            </div>
-            <div class="pic_text_2" style="text-align:center"> <%= venue.venue_type.capitalize %>
-            </div>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
+            <div class="pic_text" style="text-align:center"><%= venue.name %></div>
+            <% if venue.venue_type == 'restaurant' %>
+              <div class="text-center"><i class="fas fa-utensils"></i></div>
+            <% elsif venue.venue_type == 'bar' %>
+              <div class="text-center"><i class="fas fa-beer"></i></div>
+            <% elsif venue.venue_type == 'nightclub' %>
+              <div class="text-center"><i class="fas fa-cocktail"></i></div>
+            <% end %>
           </div>
         <% end %>
       </div>
