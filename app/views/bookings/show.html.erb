@@ -34,14 +34,23 @@
               <i class="fas fa-star" style="opacity:.3;"></i>
             </div>
             <div class="pricing-details">
-              <!-- @venue.price -->
+             <% if @price == 1 %>
+              <i class="fas fa-dollar-sign"></i>
+            <% elsif @price == 2 %>
               <i class="fas fa-dollar-sign"></i>
               <i class="fas fa-dollar-sign"></i>
-              <i class="fas fa-dollar-sign" style="opacity:.3;"></i>
-              <div>
-
-              </div>
+            <% elsif @price == 3 %>
+              <i class="fas fa-dollar-sign"></i>
+              <i class="fas fa-dollar-sign"></i>
+              <i class="fas fa-dollar-sign"></i>
+            <% elsif @price == 4 %>
+              <i class="fas fa-dollar-sign"></i>
+              <i class="fas fa-dollar-sign"></i>
+              <i class="fas fa-dollar-sign"></i>
+              <i class="fas fa-dollar-sign"></i>
+            <% end %>
             </div>
+
             <p class="hours">Open until <%= @venue.hours %></p>
           </div>
 
