@@ -17,8 +17,10 @@
 //     document.getElementById('booking_passengers').stepDown();
 // }
 
-$(document).ready(function(){
-  $(".form-check").click(function(){
-    $(this).toggleClass("active");
-  });
-});
+
+// $(document).ready(function(){
+//   $(".category-choice").click(function(){
+//     $(this).toggleClass("active");
+//     console.log("active")
+//   });
+// });
