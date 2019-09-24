@@ -40,6 +40,29 @@
 }
 
 // Checkboxes design
+
+.form-check {
+  padding: 20px;
+  border-radius: 4px;
+  color: #b7b7b7;
+  flex: 0 0 30%;
+  text-align: center;
+  border: 1px solid $lightgrey;
+  margin: 8px;
+    &:hover {
+      opacity: 1;
+      background-color: white;
+      cursor: pointer;
+      color: black;
+    }
+    &.active {
+      background: white;
+      color: black;
+    }
+}
+
+// OLD FORM
+
 .category-choices {
   display: flex;
   justify-content: space-between;
@@ -70,12 +93,13 @@
   align-items: baseline;
 }
 
-.plus {
-  background-color: $darkgrey;
-  width: 48px;
-  padding: 8px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  font-weight: bold;
-  font-size: 25px;
-}
+// STYLING FOR PASSENGER COUNT
+// .plus {
+//   background-color: $darkgrey;
+//   width: 48px;
+//   padding: 8px;
+//   border-radius: 4px;
+//   margin-bottom: 16px;
+//   font-weight: bold;
+//   font-size: 25px;
+// }
