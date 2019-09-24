@@ -109,8 +109,10 @@ body .content {
 
 .trip-details {
   justify-content: center;
-  padding-top: 30px;
+  padding: 30px auto;
+  background-color: $black;
 }
+
 
 .venue-details {
   border: 1px solid white;
