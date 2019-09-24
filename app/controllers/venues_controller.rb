@@ -16,11 +16,6 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
-    @venues = Venue.geocoded
-    @markers = [{
-        lat: @venue.latitude,
-        lng: @venue.longitude
-    }]
   end
 
   def update
