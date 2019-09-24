@@ -17,7 +17,7 @@ Venue.create!(
     cool_facts: ['Try the prawn pastels and cheese pies', 'Great view of the bay and Botofago', 'Eat at the restaurant on the second level'],
     hours: '11 PM',
     rating: 4.5,
-    price: 3.0,
+    price: 3.0
 )
 #2
 Venue.create!(
@@ -28,7 +28,7 @@ Venue.create!(
     cool_facts: ['Great decor inside a historic building', 'Live music every night', 'Amazing Brazilian food'],
     hours: '5 AM',
     rating: 4.5,
-    price: 3.0,
+    price: 3.0
 
 )
 #3
@@ -40,7 +40,7 @@ Venue.create!(
     cool_facts: ['Located in the heart of Santa Teresa', 'Beautiful decor with black and white photos on the walls', 'Amazing Feijoada'],
     hours: '12 AM',
     rating: 4.0,
-    price: 2.0,
+    price: 2.0
 )
 #4
 Venue.create!(
@@ -51,7 +51,7 @@ Venue.create!(
     cool_facts: ['Authentic bar giving you a glimpse at the real Rio', 'Bohemic place with great music and a philantropic owner Alfredinho', 'Great bar for people watching'],
     hours: '1 AM',
     rating: 4.5,
-    price: 2.0,
+    price: 2.0
 )
 #5
 Venue.create!(
@@ -62,7 +62,7 @@ Venue.create!(
     cool_facts: ['Voted best craft beer bar in Rio by Veja’s Comer & Beber' 'Rustic building with exposed beams and brickwork'],
     hours: '1 AM',
     rating: 4.5,
-    price: 3.0,
+    price: 3.0
 )
 #6
 Venue.create!(
@@ -73,8 +73,7 @@ Venue.create!(
     cool_facts: ['One of the most traditional boteca (Brazilian bars) in Rio', 'Arrive early for a table', 'Eat the fish cakes (bolinhos)'],
     hours: '12 AM',
     rating: 4.0,
-    price: 2.0,
-
+    price: 2.0
 )
 #7
 Venue.create!(
@@ -85,7 +84,7 @@ Venue.create!(
     cool_facts: ['Hidden local gem in Ipanema', 'Great wine selections', 'Try the speakeasy tucked under the bar'],
     hours: '12 AM',
     rating: 4.0,
-    price: 2.0,
+    price: 2.0
 )
 #8
 Venue.create!(
@@ -96,7 +95,7 @@ Venue.create!(
     cool_facts: [ 'Great outdoor seating', 'Amazing service'],
     hours: '12 AM',
     rating: 4.0,
-    price: 3.0,
+    price: 3.0
 )
 #9
 Venue.create!(
@@ -107,7 +106,7 @@ Venue.create!(
     cool_facts: ['Award winning pastels', 'Try the caipirinhas', 'Good starting point for a great night in Lapa'],
     hours: '12 AM',
     rating: 4.0,
-    price: 2.0,
+    price: 2.0
 )
 #10
 Venue.create!(
@@ -118,7 +117,7 @@ Venue.create!(
     cool_facts: ['Wide range of caipirinhas', 'Popular chain of betecos', 'Great Service'],
     hours:'2 AM',
     rating: 4.0,
-    price: 2.0,
+    price: 2.0
 )
 
 puts ">>> bars seeded"
@@ -131,7 +130,7 @@ Venue.create!(
     cool_facts: ['Best sandwiches in Rio', 'Huge portions', 'Great hidden gem' ],
     hours:'4 AM',
     rating: 5.0,
-    price: 2.0,
+    price: 2.0
 )
 #2
 Venue.create!(
@@ -142,7 +141,7 @@ Venue.create!(
     cool_facts: ['Great food', 'Traditional Brazilian restaurant', 'Informal service'],
     hours:'2:30 AM',
     rating: 4.0,
-    price: 2.0,
+    price: 2.0
 )
 #3
 Venue.create!(
@@ -153,8 +152,7 @@ Venue.create!(
     cool_facts: ['Vegetarian friendly with vegan and gluten free options', 'Best Arabic food in Rio', 'Try the hummus'],
     hours:'11 PM',
     rating: 4.0,
-    price: 3.0,
-
+    price: 3.0
 )
 #4
 Venue.create!(
@@ -165,7 +163,7 @@ Venue.create!(
     cool_facts: ['Very clean establishment', 'Fresh seafood', 'Great Hole in the wall', 'Awesome Tapas'],
     hours:'12 AM',
     rating: 3.5,
-    price: 2.0,
+    price: 2.0
 )
 #5
 Venue.create!(
@@ -176,7 +174,7 @@ Venue.create!(
     cool_facts: ['Great atmosphere', 'Amazing Brazilian pub food', 'Best burgers', 'Friendly attentive staff'],
     hours:'12 AM',
     rating: 4.0,
-    price: 3.0,
+    price: 3.0
 )
 #6
 Venue.create!(
@@ -187,7 +185,7 @@ Venue.create!(
     cool_facts: ['Good food at a great price', 'Free wifi'],
     hours:'10 PM',
     rating: 4.0,
-    price: 2.0,
+    price: 2.0
 )
 #7
 Venue.create!(
@@ -198,7 +196,7 @@ Venue.create!(
     cool_facts: ['Amazing Brazilian steakhouse', 'Excellent meat selection', 'Worth every penny'],
     hours:'9:30 PM',
     rating: 4.0,
-    price: 4.0,
+    price: 4.0
 )
 #8
 Venue.create!(
@@ -206,10 +204,10 @@ Venue.create!(
     location: 'Av. Portugal, 986 - lj.d - Urca, Rio de Janeiro - RJ, 22296-050',
     picture: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'restaurant',
-    cool_facts: ['', '', ''],
-    hours:'',
-    rating: ,
-    price: ,
+    cool_facts: ['European and International cuisine', 'Vegetarian friendly', 'Excellent place with great views hidden away on Urca'],
+    hours:'12 AM',
+    rating: 4.5,
+    price: 3.0
 )
 #9
 Venue.create!(
@@ -217,10 +215,10 @@ Venue.create!(
     location: '45 Rua Dias Ferreira, Leblon Rio de Janeiro, 22431-050, Brazil',
     picture: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'restaurant',
-    cool_facts: ['European and International cuisine', 'Vegetarian friendly', 'Excellent place with great views hidden away on Urca'],
-    hours:'12 AM',
+    cool_facts: ['Italian cuisine', 'Great cocktails'],
+    hours:'1 AM',
     rating: 4.5,
-    price: 3.0,
+    price: 3.0
 )
 #10
 Venue.create!(
@@ -231,7 +229,7 @@ Venue.create!(
     cool_facts: ['Very busy on the weekend, make a reservation', 'Great Pizza rodizio (all you can eat)', 'English friendly'],
     hours:'11 PM',
     rating: 4.0,
-    price: 3.0,
+    price: 3.0
 )
 
 puts ">>> restaurants seeded"
