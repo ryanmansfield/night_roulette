@@ -27,7 +27,7 @@
                 <% end %>
               </div>
                 <div class="back-flip">
-                  <p> Cool facts: </p>
+                  <h4> Cool facts: </h4>
                   <% venue.cool_facts.each do |fact| %>
                   <p><li> <%= fact %></li> </p>
                   <% end %>
@@ -42,9 +42,9 @@
     <div class="landing-page-card-instruction">
       <div class="row col-10">
         <h3 style="margin:15px;">How it Works</h3>
-          <p> Select your Preferences </p>
-          <p> Spin the Wheel </p>
-          <p> Have the Time of you Life </p>
+          <p> <li>Select your Preferences</li> </p>
+          <p> <li> Spin the Wheel </li></p>
+          <p> <li>Have the Time of you Life </li></p>
           <%= link_to "Let's go", new_booking_path, class: "btn btn-gradient" %>
       </div>
     </div>
@@ -65,11 +65,10 @@
                 <% end %>
               </div>
                 <div class="back-flip">
-                  <p> Cool facts: </p>
+                  <h4> Cool facts: </h4>
                   <% venue.cool_facts.each do |fact| %>
                   <p><li> <%= fact %></li> </p>
                   <% end %>
-                  <p> <%= venue.location %></p>
                 </div>
             </div>
           </div>
