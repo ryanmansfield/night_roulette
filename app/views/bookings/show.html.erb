@@ -6,59 +6,54 @@
       <div class="container">
          <div class="row ct-section_header ct-section_header--type2"></div>
          <div class="row trip-details">
-          <div class="venue-details col-9" style="background: url(bar1.jpg);">
-            <h1> <%= @venue.name %> </h1>
-            <p> <%= @venue.location %> </p> </br>
-            <h2> Cool facts: </h2>
-            <% @facts.each do |fact| %>
-            <p><li> <%= fact %> </li></p>
-            <% end %>
-            </br>
-            <div class=" star-rating">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star" style="opacity:.3;"></i>
-            </div>
-            <div class="pricing-details">
-             <% if @price == 1 %>
-              <i class="fas fa-dollar-sign"></i>
-            <% elsif @price == 2 %>
-              <i class="fas fa-dollar-sign"></i>
-              <i class="fas fa-dollar-sign"></i>
-            <% elsif @price == 3 %>
-              <i class="fas fa-dollar-sign"></i>
-              <i class="fas fa-dollar-sign"></i>
-              <i class="fas fa-dollar-sign"></i>
-            <% elsif @price == 4 %>
-              <i class="fas fa-dollar-sign"></i>
-              <i class="fas fa-dollar-sign"></i>
-              <i class="fas fa-dollar-sign"></i>
-              <i class="fas fa-dollar-sign"></i>
-            <% end %>
-            </div>
+            <div class="venue-details col-9" style="background: url(bar1.jpg);">
+               <h1> <%= @venue.name %> </h1>
+               <p> <%= @venue.location %> </p> </br>
+               <h2> Cool facts: </h2>
+               <% @facts.each do |fact| %>
+               <p><li> <%= fact %> </li></p>
+               <% end %>
+               </br>
+               <div class=" star-rating">
+                  <% 5.times do |count|%>
+                     <% if @venue.rating > (count + 0.6)%>
+                        <i class="fas fa-star"></i>
+                     <% else %>
+                        <i class="fas fa-star" style="opacity:.3;"></i>
+                     <% end %>
+                  <% end %>
+               </div>
+               <div class="pricing-details">
+                  <% 5.times do |count|%>
+                     <% if @venue.price > (count + 1)%>
+                        <i class="fas fa-dollar-sign"></i>
+                     <% else %>
+                        <i class="fas fa-dollar-sign" style="opacity:.3;"></i>
+                     <% end %>
+                  <% end %>
+               </div>
 
-            <p class="hours">Open until <%= @venue.hours %></p>
+               <p class="hours">Open until <%= @venue.hours %></p>
 
-            <%= render 'map' %>
-          </div>
+               <%= render 'map' %>
+            </div>
+            <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
+               Rate this venue
+            </button>
 
          </div>
          
-         <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
-         Rate this venue
-         </button>
 
          <%# <div class="btn share-button">Share with your friends</div> %>
          
-         <div class="modal fade" id="rating-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               <%= render 'venues/rating-form', venue: @venue  %>
-            </div>
-         </div>
-         </div>
       </div>
    </section>
 </section>
+
+<%# Modal Closer to the body %>
+<div class="modal fade" id="rating-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <%= render 'venues/rating-form', venue: @venue  %>
+      </div>
+</div>

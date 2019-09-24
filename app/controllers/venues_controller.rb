@@ -27,7 +27,7 @@ class VenuesController < ApplicationController
     @venue.rating = updated_rating
     @venue.times_rated += 1
     @venue.update(rating: updated_rating)
-    redirect_to venue_path(@venue)
+    redirect_to booking_path(Booking.last.id)
   end
 
   private
