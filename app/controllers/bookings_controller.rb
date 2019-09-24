@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
         lat: @venue.latitude,
         lng: @venue.longitude
     }]
+    @price = @venue.price
   end
 
   def new
