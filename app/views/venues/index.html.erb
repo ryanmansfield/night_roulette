@@ -26,13 +26,13 @@
                   <div class="text-center"><i class="fas fa-cocktail"></i></div>
                 <% end %>
               </div>
-              <div class="back-flip">
-                <% venue.cool_facts.each do |fact| %>
-                <h3> Cool facts </h3>
-                <p><li> <%= fact %></li> </p>
-                <% end %>
-                <p> <%= venue.location %></p>
-              </div>
+                <div class="back-flip">
+                  <% venue.cool_facts.each do |fact| %>
+                  <h3> Cool facts </h3>
+                  <p><li> <%= fact %></li> </p>
+                  <% end %>
+                  <p> <%= venue.location %></p>
+                </div>
             </div>
           </div>
         <% end %>
