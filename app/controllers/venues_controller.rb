@@ -23,7 +23,7 @@ class VenuesController < ApplicationController
   def update
     @venue = Venue.find(params[:id])
     old_rating = @venue.rating
-    updated_rating  = ((old_rating * @venue.times_rated) + params[:venue][:rating].to_i) / (@venue.times_rated + 1)
+    updated_rating  = ((old_rating * @venue.times_rated) + params[:rating].to_i) / (@venue.times_rated + 1)
     @venue.rating = updated_rating
     @venue.times_rated += 1
     @venue.update(rating: updated_rating)

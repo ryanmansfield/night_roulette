@@ -3,28 +3,19 @@
 <h2>Here's where you're going:</h2>
 <h2> <%= @venue.name %> </h2>
 <h3> <%= @venue.location %> </h3>
+<h3> <%= @venue.rating %> out of <%= @venue.times_rated %> votes </h3>
 <br>
-<%= simple_form_for(@venue) do |f| %>
-<%= f.input :rating %>
-<%= f.submit  %>
 
-<% end %>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+  Rate this venue
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-        <%= render 'rating-form', rating: @venue.rating  %>
+        <%= render 'rating-form', venue: @venue  %>
     </div>
   </div>
 </div>

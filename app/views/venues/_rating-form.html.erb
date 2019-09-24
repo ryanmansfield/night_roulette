@@ -1,6 +1,11 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel" style="color:black;">How many stars you give to <strong><%= @venue.name %></strong>?</h5>
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
 
 <div class="modal-body">
-    <h1>Pure CSS Star Rating Widget</h1>
+<%= simple_form_for venue do |f| %>
     <fieldset class="rating">
         <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
         <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
@@ -10,6 +15,6 @@
     </fieldset>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary">Save changes</button>
+    <%= f.button :submit, class: "btn-primary" %>
+<% end %>
 </div>
