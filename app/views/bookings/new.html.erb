@@ -16,27 +16,50 @@
                 <h1>Select Your Preferences</h1>
                 <%= simple_form_for @booking do |f| %>
 
-                <div class="form-group">
-                  <input type="hidden" name="booking[venue_types][]" value="">
-                  <div class="category-choices">
-                    <span class="venue_types_buttons col-12">
-                      <input type="hidden" class="hidden" value="bar" name="booking[venue_types][]" id="booking_venue_types_bar">
-                      <label class="category-choice col-12" for="booking_venue_types_bar"><i class="fas fa-beer"> Bar</i></label>
-                    </span>
+                 <fieldset class="form-group check_boxes optional booking_venue_types">
+                    <legend class="col-form-label pt-0">Venue types</legend>
+                    <input  type="hidden" name="booking[venue_types][]" value="">
 
-                    <span class="venue_types_buttons col-12">
-                      <input type="hidden" class="hidden" value="restaurant" name="booking[venue_types][]" id="booking_venue_types_restaurant">
-                      <label class="category-choice col-12" for="booking_venue_types_restaurant"><i class="fas fa-utensils"> Restaurant</i></label>
-                    </span>
 
-                    <span class="venue_types_buttons col-12">
-                      <input type="hidden" class="hidden" value="nightclub" name="booking[venue_types][]" id="booking_venue_types_nightclub">
-                      <label class="category-choice col-12" for="booking_venue_types_nightclub"><i class="fas fa-cocktail"> Club</i></label>
-                    </span>
+                    <div class="form-check">
+                      <input  type="hidden" class="form-check-input check_boxes optional hidden" type="checkbox" value="bar" name="booking[venue_types][]" id="booking_venue_types_bar"><label class="collection_check_boxes" for="booking_venue_types_bar"><i class="fas fa-beer"> Bar</i></label>
+                    </div>
+
+
+
+
+                    <div class="form-check">
+                      <input  type="hidden" class="form-check-input check_boxes optional hidden" type="checkbox" value="restaurant" name="booking[venue_types][]" id="booking_venue_types_restaurant">
+                      <label class="collection_check_boxes" for="booking_venue_types_restaurant"><i class="fas fa-utensils"> Restaurant</i></label>
+                    </div>
+
+
+
+                    <div class="form-check">
+                      <input  type="hidden" class="form-check-input check_boxes optional hidden" type="checkbox" value="nightclub" name="booking[venue_types][]" id="booking_venue_types_nightclub">
+                      <label class="collection_check_boxes" for="booking_venue_types_nightclub"><i class="fas fa-cocktail"> Club</i></label>
                   </div>
-                </div>
 
-                <%= f.button :submit, "Place Bet", class: "btn" %>
+
+                </fieldset>
+
+                <!-- THIS IS FOR PASSENGER AMOUNT IF IT EVER NEEDS TO BE ADDED BACK IN -->
+              <!--   <div>
+                  <p>Number of players</p>
+                </div>
+                <div class="row align-center">
+                  <div class="col-xs-2">
+                    <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
+                  </div>
+                  <div class="col-xs-5" style="width: 30%;">
+                   <%#= f.input :passengers, classes: 'passenger-amount', label: false, input_html: {value: '1', disabled: true} %>
+                  </div>
+                  <div class="col-xs-2">
+                    <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
+                  </div> -->
+
+                  <%= f.button :submit, "Place Bet", class: "btn" %>
+
                 <% end %>
               </div>
             </div>
