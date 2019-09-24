@@ -3,3 +3,10 @@
 <h2>Here's where you're going:</h2>
 <h2> <%= @venue.name %> </h2>
 <h3> <%= @venue.location %> </h3>
+<br>
+<%= simple_form_for(@venue) do |f| %>
+
+<%= f.input :rating %>
+<%= f.submit  %>
+
+<% end %>

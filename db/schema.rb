@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_23_172530) do
+ActiveRecord::Schema.define(version: 2019_09_24_130438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_09_23_172530) do
     t.float "longitude"
     t.string "venue_type"
     t.string "cool_facts", default: [], array: true
+    t.integer "times_rated", default: 5
   end
 
 end
