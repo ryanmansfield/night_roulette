@@ -239,7 +239,7 @@ Venue.create!(
     location: 'R. Riachuelo, 97 - Centro, Rio de Janeiro - RJ, 20230-010',
     picture: 'https://images.unsplash.com/photo-1544785316-6e58aed68a50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'nightclub',
-    cool_facts: ['It opens over 3 floors, each with its own music and atmosphere', 'It has gafieira, a traditional samba music orchestra, as well as the dance hall where it is performed', 'For chillout head to the lounge area complete with bars and pool tables'],
+    cool_facts: ['It opens over 3 floors, each with its own music and atmosphere', 'It has gafieira, a traditional samba music orchestra', 'For chillout head to the lounge area complete with bars and pool tables'],
     hours: '5 AM',
     rating: 4,
     price: 2
@@ -273,7 +273,7 @@ Venue.create!(
     location: 'Av. Mem de Sá, 47 – Lapa, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1545128485-c400e7702796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'nightclub',
-    cool_facts: ['It attracts a crowd of professional dancers and people who want to improve their dance skills', 'It is positioned over 3 floors', 'It is famous for their half-half abacaxi & morango caipirinhas'],
+    cool_facts: ['It attracts a crowd of professional dancers', 'It is positioned over 3 floors', 'It is famous for their half-half abacaxi & morango caipirinhas'],
     hours: '5 AM',
     rating: 3.5,
     price: 3
@@ -295,7 +295,7 @@ Venue.create!(
     location: 'R. Álvaro Ramos, 270 – Botafogo, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1485889397316-8393dd065127?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'nightclub',
-    cool_facts: ['It brings the best of American, British, and Brazilian rock to its eager audience every weekend', 'It is set in a former mansion that followa the architectural style of the time', 'The outdoor patio offers great views'],
+    cool_facts: ['It brings the best of American, British, and Brazilian rock to its eager audience every weekend', 'It is set in a former mansion', 'The outdoor patio offers great views'],
     hours: '5 AM',
     rating: 3,
     price: 3
@@ -306,7 +306,7 @@ Venue.create!(
     location: '550 Rua Alice, Laranjeiras Rio de Janeiro, 22241-020, Brazil',
     picture: 'https://images.unsplash.com/photo-1558317751-bc3ed6f85f72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'nightclub',
-    cool_facts: ['Famous for their strawberry caipifruta and mix of different styles of music','Great for students and for those who miss those years', 'Come back on Sundays for their feijoada on the patio'],
+    cool_facts: ['Famous for their strawberry caipifruta and mix of different styles of music','Great for students', 'Come back on Sundays for their feijoada'],
     hours:'4 AM',
     rating: 3,
     price: 2
@@ -317,7 +317,7 @@ Venue.create!(
     location: 'Avenida Nossa Senhora de Copacabana, 435, RJ, Brazil',
     picture: 'https://images.unsplash.com/photo-1564282676901-7cc96c4c192b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'nightclub',
-    cool_facts: ['Famous for its Rio funk, hip hop and R&B vibes', 'Wood-panelled interior gives the place a cool, jungle vibe', 'One of the very few places in Rio with an extensive whiskey collection'],
+    cool_facts: ['Famous for its Rio funk, hip hop and R&B vibes', 'Wood-panelled interior gives the place a cool vibe', 'One of the very few places in Rio with an extensive whiskey collection'],
     hours: '6 AM',
     rating: 4,
     price: 3
@@ -328,7 +328,7 @@ Venue.create!(
     location: 'R. do Lavradio, 20 – Centro, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1553132717-4de9f7d12389?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'nightclub',
-    cool_facts: ['One of the main places responsible for Lapa\'s renewal', 'Its sophisticated interiors give it a very cool vibe', 'It has an extensive gastronomic menu and imported beers - our favourites are the Belgians'],
+    cool_facts: ['One of the main places responsible for Lapa\'s renewal', 'Its sophisticated interiors give it a very cool vibe', 'It has an extensive gastronomic menu and imported beers'],
     hours: '5 AM',
     rating: 4,
     price: 3
@@ -339,7 +339,7 @@ Venue.create!(
     location: 'Av. Mem de Sá, 66 – Centro, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1550977186-c4582f219a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'nightclub',
-    cool_facts: ['Its energetic Friday nights could rival any other major party city in the world', 'Expect a mixed crowd of students, tourists, and locals', 'The music is mixed and every night they give the stage to a local DJ for funky beats and slow jams'],
+    cool_facts: ['Expect a mixed crowd of students, tourists, and locals', 'The music is mixed and every night they give the stage to a local DJ for funky beats and slow jams'],
     hours: '6 AM',
     rating: 5,
     price: 4
