@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @venue = @booking.venue
     @facts = @venue.cool_facts
+    @price = @venue.price
   end
 
   def new
