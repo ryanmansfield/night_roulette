@@ -42,17 +42,18 @@
 // Checkboxes design
 
 .form-check {
-  background-color: white;
   padding: 20px;
   border-radius: 4px;
   color: #b7b7b7;
   flex: 0 0 30%;
   text-align: center;
-  border: 2px solid $lightgrey;
+  border: 1px solid $lightgrey;
   margin: 8px;
     &:hover {
       opacity: 1;
+      background-color: white;
       cursor: pointer;
+      color: black;
     }
     &.active {
       background: white;

@@ -18,7 +18,7 @@
 // }
 
 $(document).ready(function(){
-  $(".category-choice").click(function(){
+  $(".form-check").click(function(){
     $(this).toggleClass("active");
   });
 });
