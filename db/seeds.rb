@@ -14,7 +14,10 @@ Venue.create!(
     location: '205 Rua Cândido Gaffrée, Urca Rio de Janeiro, 22291-080, Brazil',
     picture: 'https://lh5.googleusercontent.com/p/AF1QipPLgmEhwzn_bYyJ2b5zK4Ndf4GWvGhzY-KzL2uU=w426-h240-k-no',
     venue_type: 'bar',
-    cool_facts: ['The food is great', 'Order a caipirinha', 'The views are awesome']
+    cool_facts: ['Try the prawn pastels and cheese pies', 'Great view of the bay and Botofago', 'Eat at the restaurant on the second level'],
+    hours: '11 PM',
+    rating: 4.5,
+    price: 3.0,
 )
 #2
 Venue.create!(
@@ -22,6 +25,11 @@ Venue.create!(
     location: '79 Avenida Mem de Sá, Centro Rio de Janeiro, 20230-150, Brazil',
     picture: 'https://lh5.googleusercontent.com/p/AF1QipNSDPldJCtSssmglodj9JHQbsoeEQBe1tjczqP1=w548-h240-k-no',
     venue_type: 'bar'
+    cool_facts: ['Great decor inside a historic building', 'Live music every night', 'Amazing Brazilian food'],
+    hours: '5 AM',
+    rating: 4.5,
+    price: 3.0,
+
 )
 #3
 Venue.create!(
@@ -29,6 +37,10 @@ Venue.create!(
     location: '99 Rua Paschoal Carlos Magno, Santa Teresa Rio de Janeiro, 20240-290, Brazil',
     picture: 'https://lh5.googleusercontent.com/p/AF1QipP0ThwOJZMWfgw_lZn8_EjsLY_jUuIcLkX1lL8R=w408-h306-k-no',
     venue_type: 'bar'
+    cool_facts: ['Located in the heart of Santa Teresa', 'Beautiful decor with black and white photos on the walls', 'Amazing Feijoada'],
+    hours: '12 AM',
+    rating: 4.0,
+    price: 2.0,
 )
 #4
 Venue.create!(
@@ -36,6 +48,10 @@ Venue.create!(
     location: 'Loja D, 50 Rua Almirante Gonçalves, Copacabana Rio de Janeiro, 22060-040, Brazil',
     picture: 'https://lh5.googleusercontent.com/p/AF1QipPSSFoc5PKXHy_dSe2Eai-SAgT6Koz-nSJfnLb8=w408-h306-k-no',
     venue_type: 'bar'
+    cool_facts: ['Authentic bar giving you a glimpse at the real Rio', 'Bohemic place with great music and a philantropic owner Alfredinho', 'Great bar for people watching'],
+    hours: '1 AM' ,
+    rating: 4.5,
+    price: 2.0,
 )
 #5
 Venue.create!(
@@ -43,6 +59,10 @@ Venue.create!(
     location: 'R. Dezenove de Fevereiro, 186 - Botafogo, Rio de Janeiro - RJ, 22280-030',
     picture: 'https://lh5.googleusercontent.com/p/AF1QipME5jQvoZMdQqMKMT55iZ-jMZdUDz6bcuafvdOG=w408-h725-k-no',
     venue_type: 'bar'
+    cool_facts: ['Voted best craft beer bar in Rio by Veja’s Comer & Beber' 'Rustic building with exposed beams and brickwork'],
+    hours: '1 AM',
+    rating: 4.5,
+    price: 3.0,
 )
 #6
 Venue.create!(
@@ -50,6 +70,11 @@ Venue.create!(
     location: '71 Rua Hilário de Gouvêia, Copacabana Rio de Janeiro, 22040-002, Brazil',
     picture: 'https://images.unsplash.com/photo-1438557068880-c5f474830377?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'bar'
+    cool_facts: ['One of the most traditional boteca (Brazilian bars) in Rio', 'Arrive early for a table', 'Eat the fish cakes (bolinhos)'],
+    hours: '12 AM',
+    rating: 4.0,
+    price: 2.0,
+
 )
 #7
 Venue.create!(
@@ -57,6 +82,10 @@ Venue.create!(
     location: 'G, Edifício Paranoá, 42 Rua Jangadeiros, Ipanema Rio de Janeiro, 22420-010, Brazil',
     picture: 'https://images.unsplash.com/photo-1517644493876-7864565e3bf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'bar'
+    cool_facts: ['Hidden local gem in Ipanema', 'Great wine selections', 'Try the speakeasy tucked under the bar'],
+    hours: '12 AM',
+    rating: 4.0,
+    price: 2.0,
 )
 #8
 Venue.create!(
@@ -64,6 +93,10 @@ Venue.create!(
     location: '85 Rua José Linhares, Leblon Rio de Janeiro, 22430-220, Brazil',
     picture: 'https://images.unsplash.com/photo-1499638673689-79a0b5115d87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'bar'
+    cool_facts: [ 'Great outdoor seating', 'Amazing service'],
+    hours: '12 AM',
+    rating: 4.0,
+    price: 3.0,
 )
 #9
 Venue.create!(
@@ -71,6 +104,10 @@ Venue.create!(
     location: 'Av. Gomes Freire, 602 - lj, Lapa - RJ, 20031-040',
     picture: 'https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'bar'
+    cool_facts: ['Award winning pastels', 'Try the caipirinhas', 'Good starting point for a great night in Lapa'],
+    hours: '12 AM',
+    rating: 4.0,
+    price: 2.0,
 )
 #10
 Venue.create!(
@@ -78,6 +115,10 @@ Venue.create!(
     location: 'Praia do Flamengo, 300 - Flamengo, Rio de Janeiro - RJ, 22210-030',
     picture: 'https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'bar'
+    cool_facts: ['Wide range of caipirinhas', 'Popular chain of betecos', 'Great Service'],
+    hours:'2 AM',
+    rating:4.0,
+    price: 2.0,
 )
 
 puts ">>> bars seeded"
