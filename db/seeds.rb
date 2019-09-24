@@ -158,35 +158,56 @@ Venue.create!(
     name: 'Lapa 40',
     location: 'R. Riachuelo, 97 - Centro, Rio de Janeiro - RJ, 20230-010',
     picture: 'https://images.unsplash.com/photo-1544785316-6e58aed68a50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['It opens over 3 floors, each with its own music and atmosphere', 'It has gafieira, a traditional samba music orchestra, as well as the dance hall where it is performed', 'For chillout head to the lounge area complete with bars and pool tables'],
+    hours: '5 AM',
+    rating: 4,
+    price: 2
+
 )
 #2
 Venue.create!(
     name: 'The Maze',
     location: 'casa 66, 414 Rua Tavares Bastos, Catete Rio de Janeiro, 22221-030, Brazil',
     picture: 'https://images.unsplash.com/photo-1525013895693-a4777efde80a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['It has privileged views over Guanabara Bay and features a backdrop to remember', "It was featured in one of Snoop Dogg\'s videos","It is famous with both established and upcoming jazz singers performing for the eager, young crowd on the weekends"],
+    hours: '5 AM',
+    rating: 5,
+    price: 3
 )
 #3
 Venue.create!(
     name: 'Sarreufa Club',
     location: 'R. Bambina, 141 - Botafogo, Rio de Janeiro - RJ, 22251-050',
     picture: 'https://images.unsplash.com/photo-1536758305353-e47b72c06853?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['It offers pool and karaoke', 'It is a great spot for locals', "It offers weekly 'Historia da Cerveja' events"],
+    hours: '4 AM',
+    rating: 4,
+    price: 3
 )
 #4
 Venue.create!(
-    name: 'Leaviano',
+    name: 'Leviano',
     location: 'Av. Mem de Sá, 47 – Lapa, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1545128485-c400e7702796?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['It attracts a crowd of professional dancers and people who want to improve their dance skills', 'It is positioned over 3 floors', 'It is famous for their half-half abacaxi & morango caipirinhas'],
+    hours: '5 AM',
+    rating: 3.5,
+    price: 3
 )
 #5
 Venue.create!(
     name: 'Fosfobox',
     location: 'loja 22a, 143 Rua Siqueira Campos, Copacabana Rio de Janeiro, 22031-070, Brazil',
     picture: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['It has a mix of pop, hip-hop, rock, electronic music and sometimes samba', 'It is well-known for its wild after-parties', 'It attracts a mixed crowd of hipsters, locals, and tourists'],
+    hours: '6 AM',
+    rating: 3,
+    price: 4
 )
 #6
 Venue.create!(
@@ -194,34 +215,54 @@ Venue.create!(
     location: 'R. Álvaro Ramos, 270 – Botafogo, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1485889397316-8393dd065127?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     venue_type: 'nightclub'
+    cool_facts: ['It brings the best of American, British, and Brazilian rock to its eager audience every weekend', 'It is set in a former mansion that followa the architectural style of the time', 'The outdoor patio offers great views'],
+    hours: '5 AM',
+    rating: 3,
+    price: 3
 )
 #7
 Venue.create!(
     name: 'Casa Rosa',
     location: '550 Rua Alice, Laranjeiras Rio de Janeiro, 22241-020, Brazil',
     picture: 'https://images.unsplash.com/photo-1558317751-bc3ed6f85f72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['Famous for their strawberry caipifruta and mix of different styles of music','Great for students and for those who miss those years', 'Come back on Sundays for their feijoada on the patio'],
+    hours:'4 AM',
+    rating: 3,
+    price: 2
 )
 #8
 Venue.create!(
     name: 'New Mariuzinn',
     location: 'Avenida Nossa Senhora de Copacabana, 435, RJ, Brazil',
     picture: 'https://images.unsplash.com/photo-1564282676901-7cc96c4c192b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['Famous for its Rio funk, hip hop and R&B vibes', 'Wood-panelled interior gives the place a cool, jungle vibe', 'One of the very few places in Rio with an extensive whiskey collection'],
+    hours: '6 AM',
+    rating: 4,
+    price: 3
 )
 #9
 Venue.create!(
     name: 'Rio Scenarium',
     location: 'R. do Lavradio, 20 – Centro, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1553132717-4de9f7d12389?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['One of the main places responsible for Lapa\'s renewal', 'Its sophisticated interiors give it a very cool vibe', 'It has an extensive gastronomic menu and imported beers - our favourites are the Belgians'],
+    hours: '5 AM',
+    rating: 4,
+    price: 3
 )
 #10
 Venue.create!(
     name: 'Teatro Odisséia',
     location: 'Av. Mem de Sá, 66 – Centro, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1550977186-c4582f219a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
+    cool_facts: ['Its energetic Friday nights could rival any other major party city in the world', 'Expect a mixed crowd of students, tourists, and locals', 'The music is mixed and every night they give the stage to a local DJ for funky beats and slow jams'],
+    hours: '6 AM',
+    rating: 5,
+    price: 4
 )
 
 puts ">>> nightclubs seeded"
