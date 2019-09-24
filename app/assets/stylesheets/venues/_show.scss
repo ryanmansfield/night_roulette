@@ -55,3 +55,11 @@ h1 {
 .rating > input:checked ~ label:hover ~ label {
   color: #ffed85;
 }
+
+#rating-modal {
+  margin-top: 30vh;
+}
+
+#rating-modal div {
+  align-items: center;
+}
