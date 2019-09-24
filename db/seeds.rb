@@ -214,7 +214,7 @@ Venue.create!(
     name: 'Bar Bukowski',
     location: 'R. Álvaro Ramos, 270 – Botafogo, Rio de Janeiro',
     picture: 'https://images.unsplash.com/photo-1485889397316-8393dd065127?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    venue_type: 'nightclub'
+    venue_type: 'nightclub',
     cool_facts: ['It brings the best of American, British, and Brazilian rock to its eager audience every weekend', 'It is set in a former mansion that followa the architectural style of the time', 'The outdoor patio offers great views'],
     hours: '5 AM',
     rating: 3,
