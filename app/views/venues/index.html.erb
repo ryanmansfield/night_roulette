@@ -5,19 +5,13 @@
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);">
-  </div>
-  <div class="landing-page-content">
-    <div class="row" style="text-align: center;">
-      <div class="header-text col-9 mx-5 px-3">
-        <h1> Night Roulette </h1>
-        <p class="headline load-hidden">
-          Get ready for the best night of your life
-        </p>
-      </div>
-    </div>
-  </div>
-    <div class="container">
+<section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80');">
+
+   <h1>Night Roulette</h1>
+</section>
+<section class="content">
+   <section class="add-margin-bottom">
+      <div class="container">
       <div class="cards">
         <% @random_first.each do |venue| %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
@@ -61,10 +55,12 @@
         <% end %>
       </div>
     </div>
-  <script>
-    ScrollReveal().reveal('.card', { delay: 300, reset: true});
-    ScrollReveal().reveal('.headline load-hidden', {delay: 500});
-  </script>
+    <script>
+      ScrollReveal().reveal('.card', { delay: 300, reset: true});
+      ScrollReveal().reveal('.headline load-hidden', {delay: 500});
+    </script>
+  </section>
+</section>
 </body>
 </html>
 
