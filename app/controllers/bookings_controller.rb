@@ -8,6 +8,11 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @venue = @booking.venue
     @facts = @venue.cool_facts
+    @venues = Venue.geocoded
+    @markers = [{
+        lat: @venue.latitude,
+        lng: @venue.longitude
+    }]
     @price = @venue.price
   end
 
