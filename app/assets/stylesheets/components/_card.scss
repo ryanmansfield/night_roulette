@@ -37,9 +37,10 @@
 }
 
 .back-flip {
-  background: white;
-  color: black;
+  background: #080A0E;
+  color: white;
   transform: rotateY( 180deg );
+  font-size: 12px;
 }
 
 
@@ -51,10 +52,10 @@
 .pic_text {
   margin-top: 30%;
   color: white;
-  size: 12px;
+  size: 6px;
   text-transform: uppercase;
 }
 .pic_text_2 {
   color: white;
-  size: 6px;
+  size: 4px;
 }
