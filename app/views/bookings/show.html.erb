@@ -19,7 +19,8 @@
      -->      </div>
          <div class="row trip-details">
           <div class="venue-details col-9" style="background: url(bar1.jpg);">
-            <h1> <%= @venue.name %> </h1></br>
+            <h1> <%= @venue.name %> </h1>
+            <p> <%= @venue.location %> </p> </br>
             <h2> Cool facts: </h2>
             <% @facts.each do |fact| %>
             <p><li> <%= fact %> </li></p>
