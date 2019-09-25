@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :update]
+  before_action :set_booking, only: [:show, :edit, :update, :fetch_status]
+
+  skip_before_action :verify_authenticity_token, only: :fetch_status
 
   def index
     @user = current_user
@@ -47,6 +49,17 @@ class BookingsController < ApplicationController
 
   def latest
     @bookings = Booking.all[0..10].reverse
+  end
+
+  def fetch_status
+    @venue = @booking.venue
+    @facts = @venue.cool_facts
+    @venues = Venue.geocoded
+    @markers = [{
+        lat: @venue.latitude,
+        lng: @venue.longitude
+    }]
+    @price = @venue.price
   end
 
   private

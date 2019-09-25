@@ -1,21 +1,28 @@
 <section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @venue.picture %>);">
    <h1>We've found you an awesome <%= @venue.venue_type %>, <strong><%= current_user.name.capitalize %></strong>! </h1>
 </section>
+
 <section class="content">
    <section class="add-margin-bottom">
-    <!-- if status  = pending -->
-  <%= render 'pending' %>
-
-    <!-- elsif status = order-confirmed-->
-<!--
-<%= render 'order-confirmed' %> -->
-
-    <!-- elsif status = driver-confirmed-->
-
-<!--     <%= render 'driver-confirmed' %>
- -->
+      <% if @booking.status  == 'pending' %>
+        <%= render 'pending' %>
+      <% elsif @booking.status = 'order-confirmed' %>
+        <%= render 'order-confirmed' %>
+      <% elsif @booking.status = 'driver-confirmed' %>
+        <%= render 'driver-confirmed' %>
+      <% end %>
    </section>
 </section>
 
 <%# Modal Closer to the body %>
 <%= render 'venues/rating-modal', venue: @venue  %>
+
+<%= link_to "I am invisible", fetch_status_booking_path(@booking.id), id: "invisible-twist", style: "display: none;", remote: true %>
+
+<% content_for(:after_js) do %>
+  <script>
+    const interval = setInterval(function() {
+       document.getElementById("invisible-twist").click();
+     }, 3000);
+  </script>
+<% end %>

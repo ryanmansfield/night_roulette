@@ -1,0 +1,9 @@
+console.log("Get out of here, you little hacker!!! WTF!!!");
+
+<% if @booking.status == "pending" %>
+  document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'pending' %>";
+<% elsif @booking.status == "order-confirmed" %>
+  document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'order-confirmed' %>";
+<% elsif @booking.status == "driver-confirmed" %>
+  document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'driver-confirmed' %>";
+<% end %>
