@@ -12,7 +12,7 @@
 <section class="content">
    <section class="add-margin-bottom">
       <div class="container">
-      <div class="cards">
+      <!-- <div class="cards">
         <% @random_first.each do |venue| %>
           <div class="card">
             <div class="content-flip">
@@ -35,17 +35,26 @@
             </div>
           </div>
         <% end %>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="row col-10 offset-1" style="color: white;">
     <div class="landing-page-card-instruction">
-      <div class="row col-10">
-        <h3 style="margin:15px;">How it Works</h3>
+      <div class="row col-12">
+
+        <div class="typewriter">
+          <h2>How it works</h2>
+        </div>
           <p> <li>Select your Preferences</li> </p>
           <p> <li> Spin the Wheel </li></p>
           <p> <li>Have the Time of you Life </li></p>
+
+
           <%= link_to "Let's go", new_booking_path, class: "btn btn-gradient" %>
+
+
+
+
       </div>
     </div>
   </div>
