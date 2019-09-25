@@ -3,34 +3,17 @@
 </section>
 <section class="content">
    <section class="add-margin-bottom">
-      <div class="container">
-         <div class="row ct-section_header ct-section_header--type2"></div>
-         <div class="row trip-details">
-            <div class="venue-details col-9">
-               <h1> <%= @venue.name %> </h1>
-               <p> <%= @venue.location %> </p> </br>
-               <h2> Cool facts: </h2>
-               <% @facts.each do |fact| %>
-                  <p><li> <%= fact %> </li></p>
-               <% end %>
+    <!-- if status  = pending -->
+  <%= render 'pending' %>
 
-               <div class="star-rating">
-                  <%= render 'stars' %>
-               </div>
+    <!-- elsif status = order-confirmed-->
+<!--
+<%= render 'order-confirmed' %> -->
 
-               <%= render 'pricing' %>
+    <!-- elsif status = driver-confirmed-->
 
-               <p class="hours">Open until <%= @venue.hours %></p>
-
-               <%= render 'map' %>
-            </div>
-            <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
-               Rate this venue
-            </button>
-            <%# <div class="btn share-button">Share with your friends</div> %>
-         </div>
-
-      </div>
+<!--     <%= render 'driver-confirmed' %>
+ -->
    </section>
 </section>
 
