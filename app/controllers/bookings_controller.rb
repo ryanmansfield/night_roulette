@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
    skip_before_action :authenticate_user!, if: -> { params[:token].present? }
 
 
-  before_action :set_booking, only: [:show, :edit, :update]
+  before_action :set_booking, only: [:edit, :update]
 
 
   def index
