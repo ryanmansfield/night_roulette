@@ -1,9 +1,23 @@
-.venue-details {
-  border: 1px solid white;
+.card_booking {
   border-radius: 4px;
-  padding: 50px 30px;
+  display: inline-flex;
+  height: 10em;
+  margin: 7px;
+  position: relative;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-position: center;
+  background-size: cover;
 }
 
-.venue-details h1 {
-  font-family: $body-font;
-}
+
+// .pic_tex {
+//   margin-top: 30%;
+//   color: white;
+//   size: 6px;
+//   text-transform: uppercase;
+// }
+// .pic_text_ {
+//   color: white;
+//   size: 4px;
+// }

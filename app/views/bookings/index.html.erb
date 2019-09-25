@@ -4,29 +4,34 @@
 </section>
 <section class="content">
    <section class="add-margin-bottom">
-      <div class="container">
-         <div class="row ct-section_header ct-section_header--type2"></div>
-         <div class="row trip-details">
-            <!-- <div class="venue-details col-9" style="background: url(bar1.jpg);"> -->
+      <div class="container col-9">
+
 
                 <% current_user.bookings.each do |booking| %>
-                  <div class="card_container">
-                    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= booking.venue.picture %>);">
-                    <div class="pic_text" style="text-align:center">
-                      <%=booking.venue.name  %>
+                  <!-- <div class="card_container"> -->
+                    <div class="card_booking col-12" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= booking.venue.picture %>);">
+                      <div class="venue-name col-6" style="text-align:center">
+                        <%=booking.venue.name  %>
+                      </div>
+
+                      <div class="venue-type col-3" style="text-align:center">
+                         <% if booking.venue.venue_type == 'restaurant' %>
+                            <div class="text-center"><i class="fas fa-utensils"></i></div>
+                            <% elsif booking.venue.venue_type == 'bar' %>
+                            <div class="text-center"><i class="fas fa-beer"></i></div>
+                            <% elsif booking.venue.venue_type == 'nightclub' %>
+                            <div class="text-center"><i class="fas fa-cocktail"></i></div>
+                          <% end %>
+                      </div>
+
+                      <div class="link-back col-3" style="text-align:center">
+                       <%= link_to "Check out the details again", booking %>
+                      </div>
+
                     </div>
-                    <div class="pic_text_2" style="text-align:center">
-                      <%= booking.venue.venue_type %>
-                    </div>
-                    <div>
-                     <%= link_to "Check out the details again", booking %>
-                    </div>
-                  </div>
+
                 <% end %>
 
-            <!-- </div> -->
-         </div>
-      </div>
    </section>
 </section>
 
