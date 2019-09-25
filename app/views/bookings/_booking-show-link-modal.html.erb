@@ -1,0 +1,17 @@
+<div class="modal fade" id="booking-show-link-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color:black;">Share this venue with your friends</h5>
+        </div>
+
+        <div class="modal-body" style="color:black;">
+          <p> <%=@booking = Booking.find_by(token: params[:token])  %> </p>
+        </div>
+        <div class="modal-footer" style="color:black;">
+            <p>button</p>
+        </div>
+      </div>
+   </div>
+</div>
