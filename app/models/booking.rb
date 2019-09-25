@@ -6,6 +6,7 @@ class Booking < ApplicationRecord
 
   validates :date, presence: true
   validates :time, presence: true
+  validates :status, presence: true
 
   after_save :call_uber, on: :create
 

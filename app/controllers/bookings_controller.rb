@@ -36,7 +36,7 @@ class BookingsController < ApplicationController
   end
 
   def update
-    
+    @booking.update(license_plate: booking_params[:license_plate])
   end
 
   private
@@ -46,6 +46,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date, :time, venue_types: [], )
+    params.require(:booking).permit( :date, :time, :license_plate, venue_types: [])
   end
 end

@@ -1,4 +1,7 @@
 <div class="authentication-card">
   <%= link_to "Back", :back %>
-  
+  <%= simple_form_for @booking do |f| %>
+    <%= f.input :license_plate %>
+    <%= f.submit %>
+  <% end %>
 </div>
