@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_25_133145) do
+ActiveRecord::Schema.define(version: 2019_09_25_153226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_133145) do
     t.string "driver_name"
     t.string "price"
     t.string "eta"
+    t.string "token"
     t.index ["user_id"], name: "index_bookings_on_user_id"
     t.index ["venue_id"], name: "index_bookings_on_venue_id"
   end

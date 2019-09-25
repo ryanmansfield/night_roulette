@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :venues, only: [ :index, :show, :update]
   resources :bookings, only: [ :new, :create, :index, :show ]
 
+  get ':token', to: "bookings#show", token: /[A-Z]\d{5}/
 end
 

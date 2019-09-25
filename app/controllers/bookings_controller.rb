@@ -5,7 +5,11 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    if params[:id]
+      @booking = Booking.find(params[:id])
+    else
+      @booking = Booking.find(token)
+    end
     @venue = @booking.venue
     @facts = @venue.cool_facts
     @venues = Venue.geocoded
