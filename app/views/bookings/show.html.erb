@@ -3,47 +3,17 @@
 </section>
 <section class="content">
    <section class="add-margin-bottom">
-      <div class="container">
-         <div class="row ct-section_header ct-section_header--type2"></div>
-         <div class="row trip-details">
-            <div class="venue-details col-9" style="background: url(bar1.jpg);">
-               <h1> <%= @venue.name %> </h1>
-               <p> <%= @venue.location %> </p> </br>
-               <h2> Cool facts: </h2>
-               <% @facts.each do |fact| %>
-                  <p><li> <%= fact %> </li></p>
-               <% end %>
-               </br>
-               <div class=" star-rating">
-                  <% 5.times do |count|%>
-                     <% if @venue.rating > (count + 0.6)%>
-                        <i class="fas fa-star"></i>
-                     <% else %>
-                        <i class="fas fa-star" style="opacity:.3;"></i>
-                     <% end %>
-                  <% end %>
-               </div>
-               <div class="pricing-details">
-                  <% 5.times do |count|%>
-                     <% if @venue.price > (count + 1)%>
-                        <i class="fas fa-dollar-sign"></i>
-                     <% else %>
-                        <i class="fas fa-dollar-sign" style="opacity:.3;"></i>
-                     <% end %>
-                  <% end %>
-               </div>
+    <!-- if status  = pending -->
+        <!--  <%= render 'pending' %> -->
 
-               <p class="hours">Open until <%= @venue.hours %></p>
+    <!-- elsif status = order-confirmed-->
 
-               <%= render 'map' %>
-            </div>
-            <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
-               Rate this venue
-            </button>
-            <%# <div class="btn share-button">Share with your friends</div> %>
-         </div>
-         
-      </div>
+      <%= render 'order-confirmed' %>
+
+    <!-- elsif status = driver-confirmes-->
+
+    <!--  <%= render 'driver-confirmed' %> -->
+
    </section>
 </section>
 
