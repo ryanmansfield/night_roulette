@@ -49,13 +49,12 @@
   text-align: center;
   border: 1px solid $lightgrey;
   margin: 8px;
-    &:hover {
+
+    &.active {
       opacity: 1;
       background-color: white;
       cursor: pointer;
       color: black;
-    }
-    &.active {
       background: white;
       color: black;
     }
