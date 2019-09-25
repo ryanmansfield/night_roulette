@@ -1,10 +1,10 @@
 class BookingsController < ApplicationController
-<<<<<<< HEAD
+
    skip_before_action :authenticate_user!, if: -> { params[:token].present? }
 
-=======
+
   before_action :set_booking, only: [:show, :edit, :update]
->>>>>>> a10c041e079876e9a7c599596e315471f68a9b2c
+
 
   def index
     @user = current_user
@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-<<<<<<< HEAD
+
     if params[:id]
       # Show booking like normal
       @booking = Booking.find(params[:id])
@@ -23,8 +23,7 @@ class BookingsController < ApplicationController
 
     # ORIGINAL SHOW METHOD
     # @booking = Booking.find(params[:id])
-=======
->>>>>>> a10c041e079876e9a7c599596e315471f68a9b2c
+
     @venue = @booking.venue
     @facts = @venue.cool_facts
     @venues = Venue.geocoded
