@@ -9,8 +9,4 @@ function copyToClipBoard() {
   /* Copy the text inside the text field */
   document.execCommand("copy");
 
-  /* Alert the copied text */
-  alert("Share with friends link copied to clipboard");
-};
-
 export { copyToClipBoard };
