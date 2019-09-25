@@ -12,7 +12,7 @@
 }
 .rating > label:before {
   margin: 5px;
-  font-size: 1.25em;
+  font-size: 2.25em;
   font-family: FontAwesome;
   display: inline-block;
   content: '\f005';
@@ -36,19 +36,40 @@
   color: #ffd700;
 } /* hover previous stars in list */
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label {
-  color: #ffed85;
-}
+// .rating > input:checked + label:hover, /* hover current star when changing rating */
+// .rating > input:checked ~ label:hover,
+// .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+// .rating > input:checked ~ label:hover ~ label {
+//   color: #ffed85;
+// }
 
 #rating-modal {
   margin-top: 30vh;
 }
 
-#rating-modal div {
+#rating-modal .modal-content {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+#rating-modal .modal-title {
+  text-align: center;
+}
+
+#rating-modal .modal-footer {
   align-items: center;
+  justify-content: center;
+  border-top: 0;
+}
+
+#rating-modal .modal-body {
+  display: flex;
+  justify-content: center;
+}
+
+#rating-modal .btn {
+  border-radius: 4px;
 }
 
 .star-rating {
