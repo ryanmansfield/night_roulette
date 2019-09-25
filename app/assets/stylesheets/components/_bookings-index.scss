@@ -1,6 +1,6 @@
 .card_booking {
   border-radius: 4px;
-  display: inline-flex;
+  display: inline-block;
   height: 10em;
   margin: 7px;
   position: relative;
@@ -8,6 +8,10 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   background-position: center;
   background-size: cover;
+}
+
+.venue-name {
+  padding: 16px;
 }
 
 

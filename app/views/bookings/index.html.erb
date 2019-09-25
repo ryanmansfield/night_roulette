@@ -4,17 +4,17 @@
 </section>
 <section class="content">
    <section class="add-margin-bottom">
-      <div class="container col-9">
-
+      <div class="container col-12">
+        <div class="cards">
 
                 <% current_user.bookings.each do |booking| %>
                   <!-- <div class="card_container"> -->
-                    <div class="card_booking col-12" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= booking.venue.picture %>);">
-                      <div class="venue-name col-6" style="text-align:center">
+                    <div class="card_booking" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= booking.venue.picture %>);">
+                      <div class="venue-name" style="text-align:center">
                         <%=booking.venue.name  %>
                       </div>
 
-                      <div class="venue-type col-3" style="text-align:center">
+                      <div class="venue-type" style="text-align:center">
                          <% if booking.venue.venue_type == 'restaurant' %>
                             <div class="text-center"><i class="fas fa-utensils"></i></div>
                             <% elsif booking.venue.venue_type == 'bar' %>
@@ -25,12 +25,26 @@
                       </div>
 
                       <div class="link-back col-3" style="text-align:center">
-                       <%= link_to "Check out the details again", booking %>
+                        <%= link_to "View Booking", booking, class: "btn btn-gradient" %>
+
+
                       </div>
-
                     </div>
-
                 <% end %>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    </section>
 </section>
