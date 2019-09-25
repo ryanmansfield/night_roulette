@@ -6,10 +6,14 @@ class BookingsController < ApplicationController
 
   def show
     if params[:id]
+      # Show booking like normal
       @booking = Booking.find(params[:id])
     else
-      @booking = Booking.find(token)
+      # Show booking with token
     end
+
+    # ORIGINAL SHOW METHOD
+    # @booking = Booking.find(params[:id])
     @venue = @booking.venue
     @facts = @venue.cool_facts
     @venues = Venue.geocoded
@@ -28,6 +32,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.new(booking_params)
     if @booking.save
       # call the call_uber method to generate an uber request (Bookings model)
+
       redirect_to booking_path(@booking)
     else
       render :new
@@ -39,4 +44,25 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:date, :time, venue_types: [])
   end
+
+  def token_gen
+    # Generate a random lowercase letter
+    letter = (0...1).map { ('A'..'Z').to_a[rand(26)] }.join
+    # GENERATE 5 random numbers in a string
+    numbers = (0...5).map { (0..9).to_a[rand(5)] }.join
+    # COMBINED TOKEN
+    token = letter + numbers
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
