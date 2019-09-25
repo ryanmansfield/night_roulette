@@ -10,7 +10,7 @@ function copyToClipBoard() {
   document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
+  alert("Share with friends link copied to clipboard");
+};
 
 export { copyToClipBoard };
