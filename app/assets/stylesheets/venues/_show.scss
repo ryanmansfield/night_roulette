@@ -71,3 +71,16 @@
 #rating-modal .btn {
   border-radius: 4px;
 }
+
+.star-rating {
+  display: flex;
+}
+
+.star-rating .rating-counter {
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.star-rating > i {
+  margin: 0 2px;
+}
