@@ -5,9 +5,9 @@
       <div class="venue-details col-9">
         <div>
           <h1> Congrats! </h1>
-          <p> Your driver is on the way his name is INSERT NAME HERE. Get ready to see the <%= @venue.venue_type %> of your dreams!</p>
-          <p>Your estimated arrival is: ESTIMATED ARRIVAL</p>
-          <p>License Plate number is: BLAHBLAH</p>
+          <p> Your driver is on the way his name is <%= @booking.driver_name %>. Get ready to see the <%= @venue.venue_type %> of your dreams!</p>
+          <p>Your estimated arrival is: <%= @booking.eta %></p>
+          <p>License Plate number is: <%= @booking.license_plate %></p>
         </div>
         <div>
          <div class=" star-rating">
@@ -23,6 +23,10 @@
       <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
          Rate this venue
       </button>
+      <button type="button" class="btn share-button" data-toggle="modal" data-target="#booking-show-link-modal">
+         Share venue with friends
+      </button>
+
       <%# <div class="btn share-button">Share with your friends</div> %>
    </div>
 </div>

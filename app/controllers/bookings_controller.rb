@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :update, :fetch_status]
+  before_action :set_booking, only: [ :edit, :update, :fetch_status]
 
   skip_before_action :verify_authenticity_token, only: :fetch_status
   skip_before_action :authenticate_user!, if: -> { params[:token].present? }
