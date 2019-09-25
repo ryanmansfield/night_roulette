@@ -13,25 +13,9 @@
                <% @facts.each do |fact| %>
                   <p><li> <%= fact %> </li></p>
                <% end %>
-               </br>
-               <div class=" star-rating">
-                  <% 5.times do |count|%>
-                     <% if @venue.rating > (count + 0.6)%>
-                        <i class="fas fa-star"></i>
-                     <% else %>
-                        <i class="fas fa-star" style="opacity:.3;"></i>
-                     <% end %>
-                  <% end %>
-               </div>
-               <div class="pricing-details">
-                  <% 5.times do |count|%>
-                     <% if @venue.price > (count + 1)%>
-                        <i class="fas fa-dollar-sign"></i>
-                     <% else %>
-                        <i class="fas fa-dollar-sign" style="opacity:.3;"></i>
-                     <% end %>
-                  <% end %>
-               </div>
+
+               <%= render 'stars' %>
+               <%= render 'pricing' %>
 
                <p class="hours">Open until <%= @venue.hours %></p>
 

@@ -1,0 +1,16 @@
+function refreshForm(innerHTML) {
+  const newReviewForm = document.getElementById('new_review');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+
+function addReview(reviewHTML) {
+  const reviews = document.getElementById('reviews');
+  reviews.insertAdjacentHTML('beforeend', reviewHTML);
+}
+
+<% if @venue.errors.any? %>
+  refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: @review %>');
+<% else %>
+    <%= render 'stars' %>
+<% end %>

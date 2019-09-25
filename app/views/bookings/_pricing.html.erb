@@ -1,0 +1,9 @@
+<div class="pricing-details">
+    <% 5.times do |count|%>
+        <% if @venue.price > (count + 1)%>
+        <i class="fas fa-dollar-sign"></i>
+        <% else %>
+        <i class="fas fa-dollar-sign" style="opacity:.3;"></i>
+        <% end %>
+    <% end %>
+</div>
