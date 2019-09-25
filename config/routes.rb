@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root to: 'venues#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :venues, only: [ :index, :show, :update]
-  resources :bookings, only: [ :new, :create, :index, :show ]
+  resources :bookings, except: [ :destroy ] do
+    collection do
+      get 'latest'
+    end
+  end
 
 end
 
