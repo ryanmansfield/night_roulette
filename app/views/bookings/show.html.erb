@@ -18,9 +18,4 @@
 </section>
 
 <%# Modal Closer to the body %>
-<div class="modal fade" id="rating-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <div class="modal-dialog" role="document">
-      <div class="modal-content">
-         <%= render 'venues/rating-form', venue: @venue  %>
-      </div>
-</div>
+<%= render 'venues/rating-modal', venue: @venue  %>
