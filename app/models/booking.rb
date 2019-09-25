@@ -34,6 +34,6 @@ class Booking < ApplicationRecord
     numbers = (0...5).map { (0..9).to_a[rand(5)] }.join
     # COMBINED TOKEN
     token = letter + numbers
+    self.token = token
   end
-
 end

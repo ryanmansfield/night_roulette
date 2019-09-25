@@ -1,4 +1,7 @@
 class BookingsController < ApplicationController
+   skip_before_action :authenticate_user!, if: -> { params[:token].present? }
+
+
   def index
     @user = current_user
     @bookings = current_user.bookings
@@ -10,6 +13,7 @@ class BookingsController < ApplicationController
       @booking = Booking.find(params[:id])
     else
       # Show booking with token
+      @booking = Booking.find_by(token: params[:token])
     end
 
     # ORIGINAL SHOW METHOD
