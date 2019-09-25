@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :fetch_status]
 
   skip_before_action :verify_authenticity_token, only: :fetch_status
+  skip_before_action :authenticate_user!, if: -> { params[:token].present? }
 
   def index
     @user = current_user
@@ -9,6 +10,17 @@ class BookingsController < ApplicationController
   end
 
   def show
+    if params[:id]
+      # Show booking like normal
+      @booking = Booking.find(params[:id])
+    else
+      # Show booking with token
+      @booking = Booking.find_by(token: params[:token])
+    end
+
+    # ORIGINAL SHOW METHOD
+    # @booking = Booking.find(params[:id])
+
     @venue = @booking.venue
     @facts = @venue.cool_facts
     @venues = Venue.geocoded
@@ -27,6 +39,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.new(booking_params)
     if @booking.save
       # call the call_uber method to generate an uber request (Bookings model)
+
       redirect_to booking_path(@booking)
     else
       render :new

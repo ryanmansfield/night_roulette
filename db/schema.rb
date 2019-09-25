@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_165523) do
     t.string "driver_name"
     t.string "price"
     t.string "eta"
+    t.string "token"
     t.index ["user_id"], name: "index_bookings_on_user_id"
     t.index ["venue_id"], name: "index_bookings_on_venue_id"
   end
