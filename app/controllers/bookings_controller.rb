@@ -1,11 +1,12 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: [:show, :edit, :update]
+
   def index
     @user = current_user
     @bookings = current_user.bookings
   end
 
   def show
-    @booking = Booking.find(params[:id])
     @venue = @booking.venue
     @facts = @venue.cool_facts
     @venues = Venue.geocoded
@@ -30,9 +31,21 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    
+  end
+
   private
 
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
   def booking_params
-    params.require(:booking).permit(:date, :time, venue_types: [])
+    params.require(:booking).permit(:date, :time, venue_types: [], )
   end
 end
