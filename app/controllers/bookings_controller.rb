@@ -44,18 +44,7 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:date, :time, venue_types: [])
   end
-
-  def token_gen
-    # Generate a random lowercase letter
-    letter = (0...1).map { ('A'..'Z').to_a[rand(26)] }.join
-    # GENERATE 5 random numbers in a string
-    numbers = (0...5).map { (0..9).to_a[rand(5)] }.join
-    # COMBINED TOKEN
-    token = letter + numbers
-  end
-
 end
-
 
 
 
