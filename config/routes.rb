@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     end
   end
 
+  get ':token', to: "bookings#show", token: /[A-Z]\d{5}/
 end
 
