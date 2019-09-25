@@ -1,6 +1,6 @@
 class VenuesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_venue, only: [:show, :edit, :update]
+  before_action :set_venue, only: [:show, :update]
 
   def index
     @venues = Venue.all
@@ -17,17 +17,21 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
   end
 
-  def edit
-  end
-
   def update
-    @venue = Venue.find(params[:id])
     old_rating = @venue.rating
     updated_rating  = ((old_rating * @venue.times_rated) + params[:rating].to_i) / (@venue.times_rated + 1)
     @venue.rating = updated_rating
     @venue.times_rated += 1
-    @venue.update(rating: updated_rating)
-    redirect_to booking_path(Booking.last.id)
+    if @venue.update(rating: updated_rating)
+      respond_to do |format|
+        format.html { redirect_to booking_path(Booking.last.id) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
+    else
+      respond_to do |format|
+        format.html { render 'rating-form' }
+      end
+    end
   end
 
   private
