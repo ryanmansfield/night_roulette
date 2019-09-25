@@ -53,6 +53,7 @@ class BookingsController < ApplicationController
     # COMBINED TOKEN
     token = letter + numbers
   end
+
 end
 
 

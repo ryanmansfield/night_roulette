@@ -4,6 +4,8 @@ class Booking < ApplicationRecord
 
   before_validation :assign_random_venue, on: :create
 
+  after_validation :token_gen, on: :create
+
   validates :date, presence: true
   validates :time, presence: true
 
