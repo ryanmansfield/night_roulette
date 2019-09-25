@@ -30,7 +30,6 @@ class VenuesController < ApplicationController
     else
       respond_to do |format|
         format.html { render 'rating-form' }
-        format.js  # <-- idem
       end
     end
   end

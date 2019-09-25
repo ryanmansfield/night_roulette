@@ -6,7 +6,7 @@
       <div class="container">
          <div class="row ct-section_header ct-section_header--type2"></div>
          <div class="row trip-details">
-            <div class="venue-details col-9" style="background: url(bar1.jpg);">
+            <div class="venue-details col-9">
                <h1> <%= @venue.name %> </h1>
                <p> <%= @venue.location %> </p> </br>
                <h2> Cool facts: </h2>
@@ -14,7 +14,10 @@
                   <p><li> <%= fact %> </li></p>
                <% end %>
 
-               <%= render 'stars' %>
+               <div class="star-rating">
+                  <%= render 'stars' %>
+               </div>
+
                <%= render 'pricing' %>
 
                <p class="hours">Open until <%= @venue.hours %></p>
