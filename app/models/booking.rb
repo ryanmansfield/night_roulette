@@ -8,6 +8,7 @@ class Booking < ApplicationRecord
 
   validates :date, presence: true
   validates :time, presence: true
+  validates :status, presence: true
 
   after_save :call_uber, on: :create
 
@@ -21,6 +22,7 @@ class Booking < ApplicationRecord
     self.venue = Venue.find_random(@venue_types)
     self.time = Time.now
     self.date = Date.today
+    self.status = 'pending'
   end
 
   def call_uber

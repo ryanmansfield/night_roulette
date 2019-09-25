@@ -1,24 +1,21 @@
 <section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @venue.picture %>);">
+
    <h1>You're lucky, <strong><%= @booking.user.name.capitalize %></strong>! You're going to ...</h1>
+
+   <h1>We've found you an awesome <%= @venue.venue_type %>, <strong><%= current_user.name.capitalize %></strong>! </h1>
+
 </section>
 <section class="content">
    <section class="add-margin-bottom">
-      <div class="container">
-         <div class="row ct-section_header ct-section_header--type2"></div>
-         <div class="row trip-details">
-            <div class="venue-details col-9">
-               <h1> <%= @venue.name %> </h1>
-               <p> <%= @venue.location %> </p> </br>
-               <h2> Cool facts: </h2>
-               <% @facts.each do |fact| %>
-                  <p><li> <%= fact %> </li></p>
-               <% end %>
+    <!-- if status  = pending -->
+  <%= render 'pending' %>
 
-               <div class="star-rating">
-                  <%= render 'stars' %>
-               </div>
+    <!-- elsif status = order-confirmed-->
+<!--
+<%= render 'order-confirmed' %> -->
 
-               <%= render 'pricing' %>
+    <!-- elsif status = driver-confirmed-->
+
 
                <p class="hours">Open until <%= @venue.hours %></p>
 
@@ -34,6 +31,10 @@
          </div>
 
       </div>
+
+<!--     <%= render 'driver-confirmed' %>
+ -->
+
    </section>
 </section>
 
