@@ -32,11 +32,21 @@ class BookingsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
-    @booking.update(license_plate: booking_params[:license_plate])
+    @booking.update(license_plate: booking_params[:license_plate],
+                    status: booking_params[:status],
+                    driver_name: booking_params[:driver_name],
+                    price: booking_params[:price],
+                    eta: booking_params[:eta],
+                    pickup_time: booking_params[:pickup_time]
+                  )
+    redirect_to edit_booking_path(@booking)
+  end
+
+  def latest
+    @bookings = Booking.all[0..10].reverse
   end
 
   private
@@ -46,6 +56,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit( :date, :time, :license_plate, venue_types: [])
+    params.require(:booking).permit(:license_plate, :status, :driver_name, :price, :eta, :pickup_time, venue_types: [])
   end
 end
