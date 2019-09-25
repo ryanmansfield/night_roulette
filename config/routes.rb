@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     collection do
       get 'latest'
     end
+
+    member do
+      get 'fetch_status'
+    end
   end
 
   get ':token', to: "bookings#show", token: /[A-Z]\d{5}/

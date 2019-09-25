@@ -1,10 +1,8 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: [:show, :edit, :update, :fetch_status]
 
-   skip_before_action :authenticate_user!, if: -> { params[:token].present? }
-
-
-  before_action :set_booking, only: [:edit, :update]
-
+  skip_before_action :verify_authenticity_token, only: :fetch_status
+  skip_before_action :authenticate_user!, if: -> { params[:token].present? }
 
   def index
     @user = current_user
@@ -12,7 +10,6 @@ class BookingsController < ApplicationController
   end
 
   def show
-
     if params[:id]
       # Show booking like normal
       @booking = Booking.find(params[:id])
@@ -67,6 +64,17 @@ class BookingsController < ApplicationController
     @bookings = Booking.all[0..10].reverse
   end
 
+  def fetch_status
+    @venue = @booking.venue
+    @facts = @venue.cool_facts
+    @venues = Venue.geocoded
+    @markers = [{
+        lat: @venue.latitude,
+        lng: @venue.longitude
+    }]
+    @price = @venue.price
+  end
+
   private
 
   def set_booking
@@ -77,14 +85,3 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:license_plate, :status, :driver_name, :price, :eta, :pickup_time, venue_types: [])
   end
 end
-
-
-
-
-
-
-
-
-
-
-
