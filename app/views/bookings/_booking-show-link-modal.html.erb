@@ -1,17 +1,30 @@
 <div class="modal fade" id="booking-show-link-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
    <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" >
 
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel" style="color:black;">Share this venue with your friends</h5>
+            <h5 class="modal-title" id="exampleModalLabel" style="color:black;">Copy link and share with friends</h5>
         </div>
 
         <div class="modal-body" style="color:black;">
           <p> https://www.night-roulette.com/<%=@booking.token%> </p>
         </div>
         <div class="modal-footer" style="color:black;">
-            <p>button</p>
+            <div class="copy-btn btn btn-primary" id="copy-btn">
+              <p>Copy</p>
+            </div>
         </div>
       </div>
    </div>
 </div>
+
+<script>
+const copy = document.getElementById("copy-btn");
+
+copy.addEventListener("click", copyLink);
+
+function copyLink() {
+ console.log("Hello World!");
+
+}
+</script>
