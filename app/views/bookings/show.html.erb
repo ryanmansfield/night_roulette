@@ -1,5 +1,5 @@
 <section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @venue.picture %>);">
-   <h1>You're lucky, <strong><%= @booking.user.name.capitalize %></strong>! You're going to ...</h1>
+   <h1>We've selected an awesome <strong>< @venue.venue_type %></strong> for you!</h1>
    <h1>We've found you an awesome <%= @venue.venue_type %>, <strong><%= current_user.name.capitalize %></strong>! </h1>
 </section>
 
