@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_25_133145) do
+ActiveRecord::Schema.define(version: 2019_09_25_165523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_133145) do
     t.datetime "updated_at", null: false
     t.integer "passengers"
     t.string "pickup_time"
-    t.string "status"
+    t.string "status", default: "pending"
     t.string "pickup_location"
     t.float "longitude"
     t.float "latitude"

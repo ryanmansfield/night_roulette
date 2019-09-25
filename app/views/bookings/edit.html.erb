@@ -1,0 +1,12 @@
+<div class="authentication-card">
+  <%= simple_form_for @booking do |f| %>
+    <%= f.input :license_plate %>
+    <%= f.input :driver_name %>
+    <%= f.input :price %>
+    <%= f.input :eta %>
+    <%= f.input :pickup_time %>
+    <%= f.input :status, collection: ['pendind', 'booking-confirmed', 'driver-confirmed', 'pick-confirmed', 'arrival-confirmed', 'not-rated', 'rated'] %>
+    <%= f.submit %>
+  <% end %>
+  <%= link_to "Back", :back %>
+</div>

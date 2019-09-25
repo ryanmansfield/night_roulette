@@ -1,0 +1,36 @@
+<section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1556035511-3168381ea4d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80');">
+
+   <h1><%= current_user.name %>'s Past Spins:</h1>
+</section>
+<section class="content">
+   <section class="add-margin-bottom">
+      <div class="container col-12">
+        <div class="cards">
+            <% @bookings.each do |booking| %>
+                <!-- <div class="card_container"> -->
+                <div class="card_booking" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= booking.venue.picture %>);">
+                    <div class="venue-name" style="text-align:center">
+                    <%=booking.venue.name  %>
+                    </div>
+
+                    <div class="venue-type" style="text-align:center">
+                        <% if booking.venue.venue_type == 'restaurant' %>
+                        <div class="text-center"><i class="fas fa-utensils"></i></div>
+                        <% elsif booking.venue.venue_type == 'bar' %>
+                        <div class="text-center"><i class="fas fa-beer"></i></div>
+                        <% elsif booking.venue.venue_type == 'nightclub' %>
+                        <div class="text-center"><i class="fas fa-cocktail"></i></div>
+                        <% end %>
+                    </div>
+
+                    <div class="link-back col-3 d-flex" style="text-align:center">
+                        <%= link_to "Edit Booking", edit_booking_path(booking), class: "btn btn-gradient" %>
+                        <%= link_to "View Booking", booking, class: "btn btn-gradient ml-3" %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+   </section>
+</section>
+
+
