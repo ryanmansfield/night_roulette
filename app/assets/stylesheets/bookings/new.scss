@@ -8,16 +8,15 @@
   z-index: 19;
   display: flex;
   align-items: baseline;
+  .left-text p {
+    margin: 0;
+  }
 }
 
 .btn-bottom-bar {
   margin: 0 auto;
   left: 50%;
   z-index: 20;
-}
-
-.bottom-navbar .left-text p {
-  margin: 0;
 }
 
 .form-post {
