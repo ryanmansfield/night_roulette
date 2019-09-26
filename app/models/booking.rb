@@ -22,7 +22,6 @@ class Booking < ApplicationRecord
     self.venue = Venue.find_random(@venue_types)
     self.time = Time.now
     self.date = Date.today
-    self.status = 'pending'
   end
 
   def call_uber

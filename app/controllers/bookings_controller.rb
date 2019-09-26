@@ -27,11 +27,14 @@ class BookingsController < ApplicationController
     @venue = @booking.venue
     @facts = @venue.cool_facts
     @venues = Venue.geocoded
-    # marker for map to display the venue location 
-    # @markers = [{
-    #     lat: @venue.latitude,
-    #     lng: @venue.longitude
-    # }]
+    @all_venues = Venue.all.map { |v| { lat: v.latitude, lng: v.longitude } }
+    @markers = @all_venues.filter { |v| !v[:lat].nil? }
+
+    # marker for map to display the venue location
+     # @markers = [{
+     #     lat: @venue.latitude,
+     #     lng: @venue.longitude
+     # }]
     @price = @venue.price
   end
 
