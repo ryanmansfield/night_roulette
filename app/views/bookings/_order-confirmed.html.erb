@@ -1,6 +1,6 @@
 <div class="container" id="order-confirmed">
   <h1 style="margin: 20px auto 0 auto; text-align: center;font-weight: 800;">
-  Your Night Roulette Has Begun!</h1>
+Ordering Taxi 🚘 </h1>
    <div class="row ct-section_header ct-section_header--type2"></div>
    <div class="row trip-details">
       <!-- <div class="venue-details col-9" style="background: url(<%#= image_url('bar1.jpg') %>;"> -->
@@ -12,7 +12,9 @@
         </div>
         <div style="margin:10px auto 0 auto;">
 
-          <p> We are ordering your taxi, hold tight! Think you can guess which <%= @venue.venue_type %> you are headed to?</p> </br>
+
+
+          <p> We have selected a great <%= @venue.venue_type.capitalize %> and are now ordering you a taxi. It might take a few minutes so please hold tight! 🙊 </p> </br>
         <div>
           <%= render 'map' %>
         </div>
