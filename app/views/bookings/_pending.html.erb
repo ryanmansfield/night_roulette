@@ -1,8 +1,13 @@
-<div class="container">
+<div class="container" id="pending">
    <div class="row ct-section_header ct-section_header--type2"></div>
    <div class="row trip-details">
     <!-- <div class="venue-details col-9" style="background: url(<%#= image_url('bar1.jpg') %>;"> -->
       <div class="venue-details col-9">
+        <div class="container">
+          <div class="progress-bar">
+            <div class="loaded-pending"></div>
+          </div>
+        </div>
          <h1> Congrats! </h1>
          <p> We've found the perfect <%= @venue.venue_type %>  for you!</p> </br>
          <h2> Cool facts: </h2>
