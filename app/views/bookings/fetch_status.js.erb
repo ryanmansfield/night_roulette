@@ -13,4 +13,8 @@ var container = document.querySelector(".container");
   if (container.id != "pick-confirmed") {
     document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'pick-confirmed' %>";
   }
+<% elsif @booking.status == "arrival-confirmed" %>
+if (container.id != "arrival-confirmed") {
+  document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'arrival-confirmed' %>";
+}
 <% end %>
