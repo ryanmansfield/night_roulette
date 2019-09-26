@@ -8,9 +8,10 @@
             <div class="loaded-order-confirmed"></div>
           </div>
         </div>
-        <div>
-          <h1><%= @venue.name %> </h1>
-          <h5> Cool facts </h5>
+        <div><br/>
+          <h2> You're going to </h2> <br/>
+          <h1>🎉<%= @venue.name %>🎉 </h1><br/>
+          <h5> Cool facts: </h5>
          <% @facts.each do |fact| %>
             <p><li> <%= fact %> </li></p>
          <% end %>
