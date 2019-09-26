@@ -10,7 +10,7 @@
         </div>
         <div><br/>
           <h2> You're going to </h2> <br/>
-          <h1>🎉<%= @venue.name %>🎉 </h1><br/>
+          <h1><%= @venue.name %>🎉 </h1><br/>
           <h5> Cool facts: </h5>
          <% @facts.each do |fact| %>
             <p><li> <%= fact %> </li></p>
@@ -29,10 +29,13 @@
         </div>
       </div>
        <button type="button" class="btn share-button col-9 pick-confirmed-btn" data-toggle="modal" data-target="#booking-show-link-modal">
-         Share venue with friends
+         Share with friends
       </button>
+
+    <div class="bottom-navbar">
       <button type="button" class="btn share-button col-9 pick-confirmed-btn" data-toggle="modal" data-target="#rating-modal">
-         Rate this venue
+         Rate this experience
       </button>
+    </div>
    </div>
 </div>
