@@ -6,7 +6,10 @@ class BookingsController < ApplicationController
 
   def index
     @user = current_user
-    @bookings = current_user.bookings
+    @all_venues = Venue.all.map { |v| { lat: v.latitude, lng: v.longitude } }
+    @my_bookings = current_user.bookings
+    @markers = @all_venues.filter { |v| !v[:lat].nil? }
+    # raise
   end
 
   def show
@@ -24,10 +27,11 @@ class BookingsController < ApplicationController
     @venue = @booking.venue
     @facts = @venue.cool_facts
     @venues = Venue.geocoded
-    @markers = [{
-        lat: @venue.latitude,
-        lng: @venue.longitude
-    }]
+    # marker for map to display the venue location 
+    # @markers = [{
+    #     lat: @venue.latitude,
+    #     lng: @venue.longitude
+    # }]
     @price = @venue.price
   end
 
