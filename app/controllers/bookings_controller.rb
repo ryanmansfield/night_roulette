@@ -89,6 +89,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:license_plate, :status, :driver_name, :price, :eta, :pickup_time, venue_types: [])
+    params.require(:booking).permit(:license_plate, :passengers, :status, :driver_name, :price, :eta, :pickup_time, venue_types: [])
   end
 end
