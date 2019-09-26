@@ -11,6 +11,8 @@
         <%= render 'order-confirmed' %>
       <% elsif @booking.status == 'driver-confirmed' %>
         <%= render 'driver-confirmed' %>
+      <% elsif @booking.status == 'pick-confirmed' %>
+      <%= render 'pick-confirmed' %>
       <% end %>
    </section>
 </section>
