@@ -44,6 +44,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = current_user.bookings.new(booking_params)
+
     if @booking.save
       # call the call_uber method to generate an uber request (Bookings model)
 

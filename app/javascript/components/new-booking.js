@@ -1,10 +1,12 @@
 const newBooking = () => {
-  const choices = document.querySelectorAll('.form-check');
+  const choices = document.querySelectorAll('div.form-check');
   choices.forEach(choice => {
     choice.addEventListener('click', event => {
-      event.currentTarget.classList.toggle('active');
-      let checked = event.currentTarget.querySelector('input').checked;
-      event.currentTarget.querySelector('input').checked = !checked;
+      const label = event.target.closest('label') || event.target.querySelector('label');
+      const checkBox = document.getElementById(label.dataset.for);
+
+      event.target.closest('div.form-check').classList.toggle('active');
+      checkBox.checked = !checkBox.checked;
     });
   });
 };
