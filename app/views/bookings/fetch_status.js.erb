@@ -1,16 +1,16 @@
 
 var container = document.querySelector(".container");
 
-<% if @booking.status == "pending" %>
-  if (container.id != "pending") {
-    document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'pending' %>";
-  }
-<% elsif @booking.status == "order-confirmed" %>
+<% if @booking.status == "order-confirmed" %>
   if (container.id != "order-confirmed") {
     document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'order-confirmed' %>";
   }
 <% elsif @booking.status == "driver-confirmed" %>
   if (container.id != "driver-confirmed") {
     document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'driver-confirmed' %>";
+  }
+<% elsif @booking.status == "pick-confirmed" %>
+  if (container.id != "pick-confirmed") {
+    document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'pick-confirmed' %>";
   }
 <% end %>
