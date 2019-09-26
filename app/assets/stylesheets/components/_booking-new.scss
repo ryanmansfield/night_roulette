@@ -112,13 +112,16 @@
   justify-content: center;
 }
 
-.form-group {
-  .form-control {
-    background-color: transparent;
-    border: none;
-    color: $lightgrey;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-  }
+.passengers-input .form-control {
+  background-color: transparent;
+  border: none;
+  color: $lightgrey;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.booking_latitude,
+.booking_longitude {
+  display: none;
 }

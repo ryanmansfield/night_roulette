@@ -29,6 +29,7 @@ class BookingsController < ApplicationController
     @venues = Venue.geocoded
     @all_venues = Venue.all.map { |v| { lat: v.latitude, lng: v.longitude } }
     @markers = @all_venues.filter { |v| !v[:lat].nil? }
+    @my_place = [{ lat: @booking.latitude, lng: @booking.longitude }]
 
     # marker for map to display the venue location
      # @markers = [{
@@ -90,6 +91,16 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:license_plate, :passengers, :status, :driver_name, :price, :eta, :pickup_time, venue_types: [])
+    params.require(:booking).permit(:license_plate,
+                                    :pickup_location,
+                                    :passengers,
+                                    :status,
+                                    :driver_name,
+                                    :price,
+                                    :eta,
+                                    :pickup_time,
+                                    :latitude,
+                                    :longitude,
+                                    venue_types: [])
   end
 end

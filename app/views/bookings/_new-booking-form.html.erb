@@ -17,6 +17,13 @@
         </div>
     </fieldset>
 
+    <%= f.input :latitude, label: false, class: 'hidden' %>
+    <%= f.input :longitude, label: false, class: 'hidden' %>
+
+    <div id="geo-btn" style="height: 30px; width: 30px; background-color: white;"></div>
+
+    <%= f.input :pickup_location %>
+
     <div>
         <p>Number of players</p>
     </div>
@@ -25,8 +32,9 @@
         <div class="col-xs-2">
             <div class="plus" id="subtract-button"><i class="fas fa-minus"></i></div>
         </div>
+        
+        <div class="passengers-input col-xs-5" style="width: 30%;">
 
-        <div class="col-xs-5" style="width: 30%;">
             <%= f.input :passengers, label: false, class: 'passenger-amount', input_html: {value: '1', disabled: true} %>
         </div>
 

@@ -4,7 +4,8 @@ import { initMapbox } from '../plugins/init_mapbox';
 import {
   newBooking,
   increasePassengerAmount,
-  decreasePassengerAmount
+  decreasePassengerAmount,
+  geoLocation
 } from '../components/new-booking';
 import { copyToClipBoard } from '../components/copy-to-clip-board';
 import { mapRoulette } from '../components/map-roulette';
@@ -12,5 +13,6 @@ initMapbox();
 newBooking();
 increasePassengerAmount();
 decreasePassengerAmount();
+geoLocation();
 mapRoulette();
 copyToClipBoard();
