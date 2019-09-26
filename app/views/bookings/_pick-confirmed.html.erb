@@ -2,7 +2,7 @@
    <div class="row ct-section_header ct-section_header--type2"></div>
    <div class="row trip-details">
       <!-- <div class="venue-details col-9" style="background: url(<%#= image_url('bar1.jpg') %>;"> -->
-      <div class="venue-details col-9 mb-15">
+      <div class="venue-details col-9 mb-30" style="padding-top: 50px;">
         <div class="container">
           <div class="progress-bar">
             <div class="loaded-order-confirmed"></div>
@@ -29,15 +29,18 @@
          <p class="hours">Open until <%= @venue.hours %></p>
         </div>
       </div>
-        <div class="bottom-navbar">
-          <div class="left-text d-flex">
-            <button type="button" class="btn share-button col-9 pick-confirmed-btn" data-toggle="modal" data-target="#booking-show-link-modal">
+        <div class="bottom-navbar d-flex" style="padding:0; background-color: black;">
+          <div class="d-flex col-6">
+            <button type="button" class="btn share-button-nav col-10 pick-confirmed-btn" data-toggle="modal" data-target="#booking-show-link-modal" style="background-color: #444444; color: white; border:none;">
             Share
             </button>
-            <button type="button" class="btn share-button col-9 pick-confirmed-btn" data-toggle="modal" data-target="#rating-modal">
-               Rate
-            </button>
           </div>
+            <div class="d-flex col-6">
+              <button type="button" class="btn share-button-nav col-10 pick-confirmed-btn" data-toggle="modal" data-target="#rating-modal" style="color:black; background-color: white">
+                 Rate
+              </button>
+            </div>
+
         </div>
    </div>
 </div>
