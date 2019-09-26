@@ -4,7 +4,6 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { newBooking } from '../components/new-booking';
 import { mapRoulette } from '../components/map-roulette';
 import { copyToClipBoard } from '../components/copy-to-clip-board';
-import { copy } from 'gl-matrix/src/gl-matrix/mat2d';
 initMapbox();
 newBooking();
 mapRoulette();
