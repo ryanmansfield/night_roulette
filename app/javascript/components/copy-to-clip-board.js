@@ -13,7 +13,7 @@ if (shareBtn) {
   // document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("You Have Shared with all your friends");
+  alert("Your night has been shared with friends, have a great time!!");
   });
 }
 }
