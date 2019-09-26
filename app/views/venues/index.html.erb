@@ -12,41 +12,17 @@
 <section class="content">
    <section class="add-margin-bottom">
       <div class="container">
-      <div class="cards">
-        <% @random_first.each do |venue| %>
-          <div class="card">
-            <div class="content-flip">
-              <div class="front-flip" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
-                <div class="pic_text" style="text-align:center"><%= venue.name %></div>
-                <% if venue.venue_type == 'restaurant' %>
-                  <div class="text-center"><i class="fas fa-utensils"></i></div>
-                <% elsif venue.venue_type == 'bar' %>
-                  <div class="text-center"><i class="fas fa-beer"></i></div>
-                <% elsif venue.venue_type == 'nightclub' %>
-                  <div class="text-center"><i class="fas fa-cocktail"></i></div>
-                <% end %>
-              </div>
-                <div class="back-flip">
-                  <h4> Cool facts: </h4>
-                  <% venue.cool_facts.each do |fact| %>
-                  <p><li> <%= fact %></li> </p>
-                  <% end %>
-                </div>
-            </div>
-          </div>
-        <% end %>
+
+      <div class="landing-page-card-instruction">
+        <div class="row col-10">
+          <h3 style="margin:15px;">How it Works</h3>
+            <p> <li>Select your Preferences</li> </p>
+            <p> <li> Spin the Wheel </li></p>
+            <p> <li>Have the Time of you Life </li></p>
+            <%= link_to "Let's go", new_booking_path, class: "btn btn-gradient col-12" %>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="row col-10 offset-1" style="color: white;">
-    <div class="landing-page-card-instruction">
-      <div class="row col-10">
-        <h3 style="margin:15px;">How it Works</h3>
-          <p> <li>Select your Preferences</li> </p>
-          <p> <li> Spin the Wheel </li></p>
-          <p> <li>Have the Time of you Life </li></p>
-          <%= link_to "Let's go", new_booking_path, class: "btn btn-gradient" %>
-      </div>
+
     </div>
   </div>
     <div class="container">
