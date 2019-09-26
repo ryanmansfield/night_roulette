@@ -6,10 +6,20 @@
   width: 100%;
   background-color: $darkgrey;
   z-index: 19;
+  display: flex;
+  align-items: baseline;
 }
 
 .btn-bottom-bar {
   margin: 0 auto;
   left: 50%;
   z-index: 20;
+}
+
+.bottom-navbar .left-text p {
+  margin: 0;
+}
+
+.form-post {
+  margin-bottom: 100px;
 }
