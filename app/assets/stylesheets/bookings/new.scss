@@ -1,0 +1,24 @@
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  background-color: $darkgrey;
+  z-index: 19;
+  display: flex;
+  align-items: baseline;
+  .left-text p {
+    margin: 0;
+  }
+}
+
+.btn-bottom-bar {
+  margin: 0 auto;
+  left: 50%;
+  z-index: 20;
+}
+
+.form-post {
+  margin-bottom: 100px;
+}
