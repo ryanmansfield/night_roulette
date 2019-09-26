@@ -39,17 +39,15 @@ function geoLocation() {
   const x = document.getElementById('demo');
   function getLocation() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
+      navigator.geolocation.getCurrentPosition(inputPosition);
     } else {
       x.innerHTML = 'Geolocation is not supported by this browser.';
     }
   }
-
-  function showPosition(position) {
-    x.innerHTML =
-      'Latitude: ' +
-      position.coords.latitude +
-      '<br>Longitude: ' +
+  function inputPosition(position) {
+    document.querySelector('.booking_latitude input').value =
+      position.coords.latitude;
+    document.querySelector('.booking_longitude input').value =
       position.coords.longitude;
   }
   const geoButton = document.getElementById('geo-btn');
