@@ -20,7 +20,7 @@
             <!-- <input type="text" value="https://www.night-roulette.com/<%=@booking.token%>" id="myInput"> -->
           </div>
           <div class="modal-footer" style="color:black;">
-            <button class="btn btn-primary col-12" id="share-btn" onclick="copyToClipBoard()">Share To All</button>
+            <button class="btn btn-primary col-12" id="share-btn" >Share To All</button>
           </div>
         </div>
 
@@ -28,19 +28,4 @@
    </div>
 </div>
 
-<script>
-  function copyToClipBoard() {
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
 
-  /* Select the text field */
-  // copyText.select();
-  // copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("We have shared the venue and location with all your friends");
-}
-</script>
