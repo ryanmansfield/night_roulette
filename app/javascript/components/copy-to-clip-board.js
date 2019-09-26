@@ -8,13 +8,6 @@ function copyToClipBoard() {
 
   /* Copy the text inside the text field */
   document.execCommand('copy');
-
-  let shareBtn = document.getElementById('share-btn');
-  if (shareBtn) {
-    shareBtn.addEventListener('click', event => {
-      copyToClipBoard();
-    });
-  }
 }
 
 export { copyToClipBoard };

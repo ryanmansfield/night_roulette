@@ -8,4 +8,10 @@ import { copy } from 'gl-matrix/src/gl-matrix/mat2d';
 initMapbox();
 newBooking();
 mapRoulette();
-copyToClipBoard();
+
+let shareBtn = document.getElementById('share-btn');
+if (shareBtn) {
+  shareBtn.addEventListener('click', event => {
+    copyToClipBoard();
+  });
+}
