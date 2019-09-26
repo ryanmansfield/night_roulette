@@ -98,7 +98,8 @@
 
 // STYLING FOR PASSENGER COUNT
 .plus {
-  background-color: $darkgrey;
+  background-color: transparent;
+  border: 1px solid $lightgrey;
   color: $lightgrey;
   width: 60px;
   height: 60px;
