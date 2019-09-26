@@ -8,24 +8,25 @@
             <div class="loaded-order-confirmed"></div>
           </div>
         </div>
+        <div style="margin:10px auto 0 auto;">
+          <h2>Hold Tight</h2>
+          <p> We are ordering your taxi! Get ready to see the <%= @venue.venue_type %> of your dreams!</p> </br>
         <div>
-          <p> We are getting in touch with your concierge for the evening. Get ready to see the <%= @venue.venue_type %> of your dreams!</p> </br>
+          <%= render 'map' %>
+        </div>
 
         </div>
         <div>
          <div class=" star-rating">
           <%= render 'stars' %>
          </div>
-         <div class="pricing-details">
-            <%= render 'pricing' %>
+         <div class="d-flex justify-content-between">
+          <%= render 'pricing' %>
+          <p style="margin-top: 10px;">Open until <%= @venue.hours %></p>
          </div>
-         <p class="hours">Open until <%= @venue.hours %></p>
         </div>
       </div>
 
-      <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
-         Rate this venue
-      </button>
       <%# <div class="btn share-button">Share with your friends</div> %>
    </div>
 
