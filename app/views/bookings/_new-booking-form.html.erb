@@ -1,7 +1,7 @@
 <%= simple_form_for booking do |f| %>
     
     <fieldset class="form-group check_boxes optional booking_venue_types">
-        <legend class="col-form-label pt-0">Venue types</legend>
+        <legend class="col-form-label pt-0">Customize which types:</legend>
         <div class="form-check">
             <input class="form-check-input check_boxes optional hidden" type="checkbox" value="bar" name="booking[venue_types][]" id="booking_venue_types_bar" style="display: none;">
             <label class="collection_check_boxes" for="booking_venue_types_bar">🍺 Bar</label>
@@ -16,30 +16,24 @@
         </div>
     </fieldset>
 
-    <!-- THIS IS FOR PASSENGER AMOUNT IF IT EVER NEEDS TO BE ADDED BACK IN -->
-            <div>
-                <p>Number of players</p>
-            </div>
-            <div class="row align-center">
-                <div class="col-xs-2">
-                <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
-                </div>
-                <div class="col-xs-5" style="width: 30%;">
-                <%= f.input :passengers, classes: 'passenger-amount', label: false, input_html: {value: '1', disabled: true} %>
-                </div>
-                <div class="col-xs-2">
-                <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
-                </div>
-                </div>
-
-                <div class="container-passengers">
-            <!-- This is our guest counts -->
-            <div class="plus-minus">
-                <button type="button" onclick="decreasePassengerAmount()" class="plus">-</button>
-                <%= f.input :passengers, classes: 'passenger-amount', label: 'Passengers Count', input_html: {value: '1', disabled: true} %>
-                <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
-            </div>
+    <div>
+        <p>Number of players</p>
+    </div>
     
+    <div class="row align-center">
+        <div class="col-xs-2">
+            <div class="plus" id="subtract-button"><i class="fas fa-minus"></i></div>
+        </div>
+        
+        <div class="col-xs-5" style="width: 30%;">
+            <%= f.input :passengers, label: false, class: 'passenger-amount', input_html: {value: '1', disabled: true} %>
+        </div>
+
+        <div class="col-xs-2">
+            <div class="plus" id="add-button"><i class="fas fa-plus"></i></div>
+        </div>
+    </div>
+            
     <div class="bottom-navbar">
         <div class="left-text">
             <p>Undefined location</p>

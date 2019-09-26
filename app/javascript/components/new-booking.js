@@ -11,19 +11,24 @@ const newBooking = () => {
 
 function increasePassengerAmount() {
   // this.parentNode.querySelector('input[type=number]').stepUp()
-  // Grab the value
-  currentValue = document.getElementById('booking_passengers').value;
-  // Check if its less than 4
-  if (currentValue < 4)
-    // If less than 4, add
-    document.getElementById('booking_passengers').stepUp();
+
+  let currentAmount = document.getElementById('booking_passengers');
+  const addButton = document.getElementById('add-button');
+  addButton.addEventListener('click', () => {
+    if (currentAmount.value < 4) {
+      currentAmount.stepUp();
+    }
+  });
 }
 
 function decreasePassengerAmount() {
-  currentValue = document.getElementById('booking_passengers').value;
-  // Check if its less than 4
-  if (currentValue > 1)
-    document.getElementById('booking_passengers').stepDown();
+  let currentAmount = document.getElementById('booking_passengers');
+  const addButton = document.getElementById('subtract-button');
+  addButton.addEventListener('click', () => {
+    if (currentAmount.value > 1) {
+      currentAmount.stepDown();
+    }
+  });
 }
 
-export { newBooking };
+export { newBooking, increasePassengerAmount, decreasePassengerAmount };
