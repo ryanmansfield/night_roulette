@@ -1,5 +1,5 @@
 <%= simple_form_for booking do |f| %>
-    
+
     <fieldset class="form-group check_boxes optional booking_venue_types">
         <legend class="col-form-label pt-0">Venue types</legend>
         <div class="form-check">
@@ -39,12 +39,12 @@
                 <%= f.input :passengers, classes: 'passenger-amount', label: 'Passengers Count', input_html: {value: '1', disabled: true} %>
                 <button type="button" onclick="increasePassengerAmount()" class="plus">+</button>
             </div>
-    
+
     <div class="bottom-navbar">
-        <div class="left-text">
+       <!-- <div class="left-text">
             <p>Undefined location</p>
             <p>No passengers</p>
-        </div>
+        </div> -->
         <%= f.button :submit, "Place Bet 🃏", class: "btn btn-bottom-bar" %>
     </div>
 
