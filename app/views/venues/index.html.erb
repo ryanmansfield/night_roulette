@@ -11,82 +11,49 @@
 </section>
 <section class="content">
    <section class="add-margin-bottom">
-      <div class="container">
-      <!-- <div class="cards">
-        <% @random_first.each do |venue| %>
-          <div class="card">
-            <div class="content-flip">
-              <div class="front-flip" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
-                <div class="pic_text" style="text-align:center"><%= venue.name %></div>
-                <% if venue.venue_type == 'restaurant' %>
-                  <div class="text-center"><i class="fas fa-utensils"></i></div>
-                <% elsif venue.venue_type == 'bar' %>
-                  <div class="text-center"><i class="fas fa-beer"></i></div>
-                <% elsif venue.venue_type == 'nightclub' %>
-                  <div class="text-center"><i class="fas fa-cocktail"></i></div>
-                <% end %>
-              </div>
-                <div class="back-flip">
-                  <h4> Cool facts: </h4>
-                  <% venue.cool_facts.each do |fact| %>
-                  <p><li> <%= fact %></li> </p>
-                  <% end %>
-                </div>
-            </div>
-          </div>
-        <% end %>
-      </div> -->
-    </div>
-  </div>
-  <div class="row col-10 offset-1" style="color: white;">
-    <div class="landing-page-card-instruction">
-
-
-        <div class="typewriter">
-          <h2>How it works</h2>
+    <div class="container">
+      <div class="landing-page-card-instruction col-12">
+        <div class="typewriter col-9">
+          <h2>How it works </h2>
         </div>
-
-        <div>
+        <div class="instructions col-12">
           <p> <li>Select your Preferences</li> </p>
           <p> <li> Place your bet </li></p>
           <p> <li> Wait for your car to arrive </li></p>
           <p> <li> Share your experience with friends </li></p>
           <p> <li>Have the Time of you Life </li></p>
         </div>
-
         <div class="btn-letsgo">
-         <%= link_to "Let's go", new_booking_path, class: "btn btn-gradient col-10" %>
+         <%= link_to "Let's go", new_booking_path, class: "btn btn-gradient col-12" %>
         </div>
-
-
-    </div>
-  </div>
-    <div class="container">
-      <div class="cards">
-        <% @random_last.each do |venue| %>
-          <div class="card">
-            <div class="content-flip">
-              <div class="front-flip" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
-                <div class="pic_text" style="text-align:center"><%= venue.name %></div>
-                <% if venue.venue_type == 'restaurant' %>
-                  <div class="text-center"><i class="fas fa-utensils"></i></div>
-                <% elsif venue.venue_type == 'bar' %>
-                  <div class="text-center"><i class="fas fa-beer"></i></div>
-                <% elsif venue.venue_type == 'nightclub' %>
-                  <div class="text-center"><i class="fas fa-cocktail"></i></div>
-                <% end %>
-              </div>
-                <div class="back-flip">
-                  <h4> Cool facts: </h4>
-                  <% venue.cool_facts.each do |fact| %>
-                  <p><li> <%= fact %></li> </p>
-                  <% end %>
-                </div>
-            </div>
-          </div>
-        <% end %>
       </div>
     </div>
+      <div class="container">
+        <div class="cards">
+          <% @random_last.each do |venue| %>
+            <div class="card">
+              <div class="content-flip">
+                <div class="front-flip" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= venue.picture %>);">
+                  <div class="pic_text" style="text-align:center"><%= venue.name %></div>
+                  <% if venue.venue_type == 'restaurant' %>
+                    <div class="text-center"><i class="fas fa-utensils"></i></div>
+                  <% elsif venue.venue_type == 'bar' %>
+                    <div class="text-center"><i class="fas fa-beer"></i></div>
+                  <% elsif venue.venue_type == 'nightclub' %>
+                    <div class="text-center"><i class="fas fa-cocktail"></i></div>
+                  <% end %>
+                </div>
+                  <div class="back-flip">
+                    <h4> Cool facts: </h4>
+                    <% venue.cool_facts.each do |fact| %>
+                    <p><li> <%= fact %></li> </p>
+                    <% end %>
+                  </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
     <script>
       ScrollReveal().reveal('.card', { delay: 300, reset: true});
       ScrollReveal().reveal('.headline load-hidden', {delay: 500});
