@@ -4,27 +4,28 @@
       <!-- <div class="venue-details col-9" style="background: url(<%#= image_url('bar1.jpg') %>;"> -->
       <div class="venue-details col-9">
         <div>
-          <p>Your estimated arrival is: <%= @booking.eta %></p>
-          <h1> Your driver is on the way!  </h1>
-          <p> Your driver's name is Placeholder_name <%= @booking.driver_name %> and the license plate number is: Placeholder_ln <%= @booking.license_plate %></p>
+          <p>Your driver's ETA is: <%= @booking.eta %></p>
+          <h2> Your driver is on the way 🙌  </h2>
+          <p> Your driver is Placeholder Name <%= @booking.driver_name %> </p>
+          <p> Placeholder License <%= @booking.license_plate %></p>
         </div>
-        <div>
-         <div class=" star-rating">
-          <%= render 'stars' %>
-         </div>
-         <div class="pricing-details">
-            <%= render 'pricing' %>
-         </div>
-         <p class="hours">Open until <%= @venue.hours %></p>
+      </br>
+        <div class="container">
+          <div class="detail-shot loaded" data-screenshot_id="4768302" data-img-src="https://cdn.dribbble.com/users/234313/screenshots/4768302/videorender.gif">
+        <img class="sml-4x3" alt="Driving Car movement automobile firebird car animated gif animated gif vector" src="https://cdn.dribbble.com/users/234313/screenshots/4768302/videorender.gif" height="205px">
         </div>
+          </div>
+        </div>
+
       </div>
 
-      <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
+
+     <!-- <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
          Rate this venue
       </button>
       <button type="button" class="btn share-button" data-toggle="modal" data-target="#booking-show-link-modal">
          Share venue with friends
-      </button>
+      </button> -->
 
       <%# <div class="btn share-button">Share with your friends</div> %>
    </div>
