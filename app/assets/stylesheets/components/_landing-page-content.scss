@@ -39,6 +39,12 @@
 .landing-page-card-instruction {
   padding: 10px;
 }
+
+.landing-page-card-instruction h2 {
+  width: 100%;
+  text-align: center;
+}
+
 .landing-page-card-instruction h3{
   font-family: $headers-font;
   padding:4px;
@@ -53,6 +59,19 @@
   margin: 10px auto;
 }
 
+.landing-page-card-instruction .typed-container {
+  height: 50px;
+}
+
+.landing-page-card-instruction .typed-container p {
+  text-align: center;
+  size: 40px;
+}
+
+.landing-page-card-instruction .typed {
+font-size: 100px;
+
+}
 .btn-gradient {
   color: white;
   padding: 8px 24px;
