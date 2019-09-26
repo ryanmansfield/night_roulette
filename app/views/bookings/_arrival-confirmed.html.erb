@@ -1,0 +1,30 @@
+<div class="container" id="arrival-confirmed">
+  <div class="row ct-section_header ct-section_header--type2"></div>
+    <div class="row trip-details">
+      <div class="venue-details col-9" id="night-details">
+        <div class="container">
+          <div class="progress-bar">
+            <div class="loaded-arrival-confirmed"></div>
+          </div><br>
+          <div style="text-align: center;">
+            <h4> Arrived </h4></br>
+            <%=@venue.name%></br>
+            <div class="star-rating" style="margin-top: 20px;">
+              <%= render 'stars' %>
+            </div>
+            <h4> Get Drunk, Do Things You'll Regret, and Have a Great Night</h4>
+            </div>
+          <div>
+        </div>
+      </div>
+    </div class="col-9">
+      <button type="button" class="btn share-button" id="arrival-rate-btn" data-toggle="modal" data-target="#rating-modal">
+         Rate this venue
+      </button>
+      <button type="button" class="btn share-button" id="arrival-share-btn" data-toggle="modal" data-target="#booking-show-link-modal">
+         Share venue with friends
+      </button>
+    </div>
+  </div>
+</div>
+
