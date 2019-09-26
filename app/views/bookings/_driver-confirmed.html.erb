@@ -2,6 +2,7 @@
    <div class="row ct-section_header ct-section_header--type2"></div>
    <div class="row trip-details">
       <!-- <div class="venue-details col-9" style="background: url(<%#= image_url('bar1.jpg') %>;"> -->
+      <h4> Your driver is on the way 🙌  </h4></br>
       <div class="venue-details col-9">
         <div class="container">
           <div class="progress-bar">
@@ -9,7 +10,7 @@
           </div>
         </div></br>
         <div>
-          <h4> Your driver is on the way 🙌  </h4></br>
+
           <p> Your driver is <%= @booking.driver_name %></p>
           <p>Driver ETA 🕛: <%= @booking.eta %></p>
           <p> Estimated 💸: <%= @booking.price %> </p>
