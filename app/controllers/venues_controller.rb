@@ -8,7 +8,7 @@ class VenuesController < ApplicationController
     @restaurants = Venue.where(venue_type: "restaurant").shuffle
     @nightclubs = Venue.where(venue_type: "nightclub").shuffle
     @random_first = [@bars[0], @restaurants[1], @nightclubs[1], @bars[1]]
-    @random_last = [@restaurants[2], @bars[3], @nightclubs[2], @restaurants[3]]
+    @random_last = [@restaurants[2], @bars[3], @nightclubs[2], @restaurants[3],@bars[0], @restaurants[1], @nightclubs[1], @bars[1]]
 
     #@aphigh = GooglePlaces.new.find
   end

@@ -141,6 +141,19 @@ body .content {
   font-weight: bolder;
 }
 
+.share-button-sticky {
+  justify-self: center;
+  margin-top: 60px;
+  align-self: center;
+  width: 80%;
+  color: white;
+  display: grid;
+  align-content: center;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-weight: bolder;
+}
+
 .share-button:hover {
   background-color: $lightgrey;
   color: black;
