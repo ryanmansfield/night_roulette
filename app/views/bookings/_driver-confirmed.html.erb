@@ -9,28 +9,25 @@
           </div>
         </div>
         <div>
-          <h1> Congrats! </h1>
-          <p> Your driver is on the way his name is <%= @booking.driver_name %>. Get ready to see the <%= @venue.venue_type %> of your dreams!</p>
-          <p>Your estimated arrival is: <%= @booking.eta %></p>
-          <p>License Plate number is: <%= @booking.license_plate %></p>
+          <p>Your driver's ETA is: <%= @booking.eta %></p>
+          <h5> Your driver is on the way 🙌  </h5>
+          <p> Your driver is Placeholder Name <%= @booking.driver_name %> </p>
+          <p> Placeholder License <%= @booking.license_plate %></p>
         </div>
-        <div>
-         <div class=" star-rating">
-          <%= render 'stars' %>
-         </div>
-         <div class="pricing-details">
-            <%= render 'pricing' %>
-         </div>
-         <p class="hours">Open until <%= @venue.hours %></p>
+      </br>
+        <div class="container">
+          <img src="https://di-uploads-pod4.dealerinspire.com/olympiajeep/uploads/2018/03/Driving-Car.gif" width="219" style="margin: 0 30px 0 0">
         </div>
+
       </div>
 
-      <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
+
+     <!-- <button type="button" class="btn share-button" data-toggle="modal" data-target="#rating-modal">
          Rate this venue
       </button>
       <button type="button" class="btn share-button" data-toggle="modal" data-target="#booking-show-link-modal">
          Share venue with friends
-      </button>
+      </button> -->
 
       <%# <div class="btn share-button">Share with your friends</div> %>
    </div>
