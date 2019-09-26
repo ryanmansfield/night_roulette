@@ -7,9 +7,9 @@
    <section class="add-margin-bottom">
       <% if @booking.status  == 'pending' %>
         <%= render 'pending' %>
-      <% elsif @booking.status = 'order-confirmed' %>
+      <% elsif @booking.status == 'order-confirmed' %>
         <%= render 'order-confirmed' %>
-      <% elsif @booking.status = 'driver-confirmed' %>
+      <% elsif @booking.status == 'driver-confirmed' %>
         <%= render 'driver-confirmed' %>
       <% end %>
    </section>
@@ -26,8 +26,8 @@
 <% content_for(:after_js) do %>
   <script>
     const interval = setInterval(function() {
-       document.getElementById("invisible-twist").click();
-     }, 3000);
+      document.getElementById("invisible-twist").click();
+    }, 3000);
   </script>
 <% end %>
 

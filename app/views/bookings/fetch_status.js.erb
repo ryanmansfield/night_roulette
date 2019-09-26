@@ -1,9 +1,16 @@
-console.log("Get out of here, you little hacker!!! WTF!!!");
+
+var container = document.querySelector(".container");
 
 <% if @booking.status == "pending" %>
-  document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'pending' %>";
+  if (container.id != "pending") {
+    document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'pending' %>";
+  }
 <% elsif @booking.status == "order-confirmed" %>
-  document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'order-confirmed' %>";
+  if (container.id != "order-confirmed") {
+    document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'order-confirmed' %>";
+  }
 <% elsif @booking.status == "driver-confirmed" %>
-  document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'driver-confirmed' %>";
+  if (container.id != "driver-confirmed") {
+    document.querySelector(".add-margin-bottom").innerHTML = "<%= j render 'driver-confirmed' %>";
+  }
 <% end %>
