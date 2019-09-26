@@ -1,0 +1,20 @@
+<%= simple_form_for booking do |f| %>
+    <fieldset class="form-group check_boxes optional booking_venue_types">
+        <legend class="col-form-label pt-0">Venue types</legend>
+        <div class="form-check">
+            <input class="form-check-input check_boxes optional hidden" type="checkbox" value="bar" name="booking[venue_types][]" id="booking_venue_types_bar" style="display: none;">
+            <label class="collection_check_boxes" for="booking_venue_types_bar">🍺 Bar</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input check_boxes optional hidden" type="checkbox" value="restaurant" name="booking[venue_types][]" id="booking_venue_types_restaurant" style="display: none;">
+            <label class="collection_check_boxes" for="booking_venue_types_restaurant"> 🍽️ Restaurant</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input check_boxes optional hidden" type="checkbox" value="nightclub" name="booking[venue_types][]" id="booking_venue_types_nightclub" style="display: none;">
+            <label class="collection_check_boxes" for="booking_venue_types_nightclub">🍸Club </label>
+        </div>
+    </fieldset>
+    <div class="bottom-navbar">
+        <%= f.button :submit, "Place Bet 🃏", class: "btn btn-bottom-bar" %>
+    </div>
+<% end %>
