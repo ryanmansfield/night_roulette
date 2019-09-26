@@ -20,10 +20,12 @@ const mapRoulette = () => {
       }, 500 * (1 + index * 0.5));
     });
   };
-
-  document.querySelector('.spin-it').addEventListener('click', e => {
-    spinPins();
-  });
+  const spinner = document.querySelector('.spin-it');
+  if(spinner) {
+    spinner.addEventListener('click', e => {
+      spinPins();
+    });
+  };
 };
 
 export { mapRoulette };
