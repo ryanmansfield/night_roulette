@@ -1,6 +1,6 @@
 .banner {
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   padding: 150px 0;
 }
 
@@ -49,16 +49,16 @@
   text-align: center;
   border: 1px solid $lightgrey;
   margin: 8px;
-    &:hover {
-      opacity: 1;
-      background-color: white;
-      cursor: pointer;
-      color: black;
-    }
-    &.active {
-      background: white;
-      color: black;
-    }
+  &:hover {
+    opacity: 1;
+    background-color: white;
+    cursor: pointer;
+    color: black;
+  }
+  &.active {
+    background: white;
+    color: black;
+  }
 }
 
 // OLD FORM
@@ -94,12 +94,27 @@
 }
 
 // STYLING FOR PASSENGER COUNT
-// .plus {
-//   background-color: $darkgrey;
-//   width: 48px;
-//   padding: 8px;
-//   border-radius: 4px;
-//   margin-bottom: 16px;
-//   font-weight: bold;
-//   font-size: 25px;
-// }
+.plus {
+  background-color: $darkgrey;
+  color: $lightgrey;
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  .form-control {
+    background-color: transparent;
+    border: none;
+    color: $lightgrey;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
