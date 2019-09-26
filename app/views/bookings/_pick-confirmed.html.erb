@@ -2,6 +2,8 @@
    <div class="row ct-section_header ct-section_header--type2"></div>
    <div class="row trip-details">
       <!-- <div class="venue-details col-9" style="background: url(<%#= image_url('bar1.jpg') %>;"> -->
+      <h1> Driver Arrived </h1> <br/>
+
       <div class="venue-details col-9">
         <div class="container">
           <div class="progress-bar">
@@ -10,14 +12,14 @@
         </div>
 
         <div><br/>
-          <h2> You're going to </h2> <br/>
-          <h1>🎉<%= @venue.name %>🎉 </h1><br/>
+          <h5> You're going to </h5> <br/>
+          <p>🎉<%= @venue.name %>🎉 </p><br/>
           <h5> Cool facts: </h5>
          <% @facts.each do |fact| %>
             <p><li> <%= fact %> </li></p>
          <% end %>
          </br>
-     
+
         </div>
         <div>
          <div class=" star-rating">
