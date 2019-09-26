@@ -16,21 +16,30 @@ function increasePassengerAmount() {
 
   let currentAmount = document.getElementById('booking_passengers');
   const addButton = document.getElementById('add-button');
-  addButton.addEventListener('click', () => {
-    if (currentAmount.value < 4) {
-      currentAmount.stepUp();
-    }
-  });
+  if (addButton) {
+    addButton.addEventListener('click', () => {
+      if (currentAmount.value < 4) {
+        currentAmount.stepUp();
+      }
+    });
+
+  }
+
 }
 
 function decreasePassengerAmount() {
   let currentAmount = document.getElementById('booking_passengers');
   const addButton = document.getElementById('subtract-button');
-  addButton.addEventListener('click', () => {
-    if (currentAmount.value > 1) {
-      currentAmount.stepDown();
-    }
-  });
+  if (addButton) {
+
+    addButton.addEventListener('click', () => {
+      if (currentAmount.value > 1) {
+        currentAmount.stepDown();
+      }
+    });
+  }
 }
 
 export { newBooking, increasePassengerAmount, decreasePassengerAmount };
+
+
