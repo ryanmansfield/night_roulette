@@ -1,6 +1,6 @@
 
 <section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(<%= @venue.picture %>);">
-  
+
 </section>
 
 <section class="content">
@@ -10,7 +10,9 @@
       <% elsif @booking.status == 'driver-confirmed' %>
         <%= render 'driver-confirmed' %>
       <% elsif @booking.status == 'pick-confirmed' %>
-      <%= render 'pick-confirmed' %>
+        <%= render 'pick-confirmed' %>
+      <% elsif @booking.status == 'arrival-confirmed' %>
+        <%= render 'arrival-confirmed' %>
       <% end %>
    </section>
 </section>
