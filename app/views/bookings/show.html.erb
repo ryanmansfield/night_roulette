@@ -1,12 +1,11 @@
-<section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @venue.picture %>);">
-   <h1>Yay! We have a great <%= @venue.venue_type.capitalize %> for you ☘ </h1>
+
+<section class="hero venue-image" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url(<%= @venue.picture %>);">
+  
 </section>
 
 <section class="content">
    <section class="add-margin-bottom">
-      <% if @booking.status  == 'pending' %>
-        <%= render 'pending' %>
-      <% elsif @booking.status == 'order-confirmed' %>
+      <% if @booking.status == 'order-confirmed' %>
         <%= render 'order-confirmed' %>
       <% elsif @booking.status == 'driver-confirmed' %>
         <%= render 'driver-confirmed' %>

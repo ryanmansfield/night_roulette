@@ -7,12 +7,14 @@
           <div class="progress-bar">
             <div class="loaded-driver-confirmed"></div>
           </div>
-        </div>
+        </div></br>
         <div>
-          <p>Your driver's ETA is: <%= @booking.eta %></p>
-          <h2> Your driver is on the way 🙌  </h2>
-          <p> Your driver is Placeholder Name <%= @booking.driver_name %> </p>
-          <p> Placeholder License <%= @booking.license_plate %></p>
+          <h4> Your driver is on the way 🙌  </h4></br>
+          <p> Your driver is <%= @booking.driver_name %></p>
+          <p>Driver ETA 🕛: <%= @booking.eta %></p>
+          <p> Estimated 💸: <%= @booking.price %> </p>
+
+          <h5> 🚘 : <%= @booking.license_plate %></h5>
         </div>
       </br>
         <div class="container">
