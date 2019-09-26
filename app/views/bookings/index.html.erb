@@ -3,10 +3,14 @@
    <h1><%= current_user.name %>'s Past Spins:</h1>
 </section>
 <section class="content">
+  
+  <button class="spin-it"> Click me</button>
+  
    <section class="add-margin-bottom">
       <div class="container col-12">
 
       <%= render 'map' %>
+  
         <div class="cards">
 
                 <% current_user.bookings.each do |booking| %>
