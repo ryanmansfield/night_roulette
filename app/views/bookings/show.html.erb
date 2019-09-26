@@ -29,9 +29,9 @@
 <%= link_to "I am invisible", fetch_status_booking_path(@booking.id), id: "invisible-twist", style: "display: none;", remote: true %>
 <% content_for(:after_js) do %>
   <script>
-    const interval = setInterval(function() {
-      document.getElementById("invisible-twist").click();
-    }, 3000);
+    // const interval = setInterval(function() {
+      // document.getElementById("invisible-twist").click();
+     //}, 3000);
   </script>
 <% end %>
 
