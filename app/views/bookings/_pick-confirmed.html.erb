@@ -1,20 +1,23 @@
 <div class="container" id="order-confirmed">
+  <h1 style="margin: 20px auto 0 auto; text-align: center"> Driver Arrived </h1>
    <div class="row ct-section_header ct-section_header--type2"></div>
    <div class="row trip-details">
       <!-- <div class="venue-details col-9" style="background: url(<%#= image_url('bar1.jpg') %>;"> -->
 
+
       <h1> Driver Arrived </h1> <br/>
+
 
       <div class="venue-details col-9 mb-30" style="padding-top: 50px;">
         <div class="container">
           <div class="progress-bar">
-            <div class="loaded-order-confirmed"></div>
+            <div class="loaded-pick-confirmed"></div>
           </div>
         </div>
 
         <div><br/>
           <h5> You're going to </h5> <br/>
-          <p>🎉<%= @venue.name %>🎉 </p><br/>
+          <h2><%= @venue.name %>🎉 </h2><br/>
           <h5> Cool facts: </h5>
          <% @facts.each do |fact| %>
             <p><li> <%= fact %> </li></p>
