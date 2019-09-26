@@ -8,7 +8,7 @@
 .loaded-order-confirmed {
   height: 100%;
   background: #444;
-  width: 33%;
+  width: 25%;
   animation: 2.5s linear progressAnimation;
   transform-origin: 0%;
 }
@@ -25,14 +25,14 @@
 .loaded-driver-confirmed {
   height: 100%;
   background: #444;
-  width: 66%;
+  width: 50%;
   animation: 2.5s linear progressAnimationTwo;
   transform-origin: 0%;
 }
 
 @keyframes progressAnimationTwo {
   0% {
-    transform: scaleX(0.49);
+    transform: scaleX(0.25);
   }
   100% {
     transform: scaleX(100%);
@@ -42,14 +42,31 @@
 .loaded-pick-confirmed {
   height: 100%;
   background: #444;
-  width: 100%;
+  width: 75%;
   animation: 2.5s linear progressAnimationThree;
   transform-origin: 0%;
 }
 
 @keyframes progressAnimationThree {
   0% {
-    transform: scaleX(0.66);
+    transform: scaleX(0.50);
+  }
+  100% {
+    transform: scaleX(100%);
+  }
+}
+
+.loaded-arrival-confirmed {
+  height: 100%;
+  background: #444;
+  width: 100%;
+  animation: 2.5s linear progressAnimationFour;
+  transform-origin: 0%;
+}
+
+@keyframes progressAnimationFour {
+  0% {
+    transform: scaleX(0.75);
   }
   100% {
     transform: scaleX(100%);
