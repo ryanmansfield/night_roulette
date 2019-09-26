@@ -19,13 +19,16 @@ const addMarkersToMap = (map, markers) => {
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([marker.lng, marker.lat]));
-  map.fitBounds(bounds, { padding: 100, maxZoom: 12 });
+  // this where one would change the loading zoom and padding is for the markers in it
+  map.fitBounds(bounds, { padding: 20, maxZoom: 15 });
 };
 
 const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
+    map.scrollZoom.disable();
+    map.dragPan.disable();
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
   }

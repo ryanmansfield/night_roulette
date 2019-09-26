@@ -16,6 +16,13 @@
         </div>
     </fieldset>
 
+    <p id="demo">oi</p>
+    <%= f.input :latitude, label: false, class: 'passenger-amount', input_html: {value: '1', disabled: true} %>
+
+    <div id="geo-btn" style="height: 30px; width: 30px; background-color: white;"></div>
+
+    <%= f.input :pickup_location %>
+
     <div>
         <p>Number of players</p>
     </div>
