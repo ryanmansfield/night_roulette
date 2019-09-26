@@ -10,12 +10,12 @@
         </div>
         <div>
           <h1><%= @venue.name %> </h1>
+          <p><%= @venue.venue_type.capitalize %></p>
           <h5> Cool facts </h5>
-         <% @facts.each do |fact| %>
-            <p><li> <%= fact %> </li></p>
-         <% end %>
-         </br>
-
+           <% @facts.each do |fact| %>
+              <p><li> <%= fact %> </li></p>
+           <% end %>
+           </br>
         </div>
         <div>
          <div class=" star-rating">

@@ -3,3 +3,28 @@
   justify-content: space-evenly;
   font-size: x-large;
 }
+
+#booking-show-link-modal {
+  margin-top: 30vh;
+}
+
+#booking-show-link-modal .modal-content {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+#booking-show-link-modal .modal-title {
+  text-align: center;
+}
+
+#booking-show-link-modal .modal-footer {
+  align-items: center;
+  justify-content: center;
+  border-top: 0;
+}
+
+
+#booking-show-link-modal .btn {
+  border-radius: 4px;
+}
