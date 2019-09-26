@@ -1,26 +1,24 @@
 import mapboxgl from 'mapbox-gl';
 
-const mapElement = document.getElementById('map');
+const mapElement = document.getElementById('map-roulette');
 
 const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
-    container: 'map',
+    container: 'map-roulette',
     style: 'mapbox://styles/mapbox/dark-v10'
   });
 };
 
 const addMarkersToMap = (map, markers) => {
-  markers.forEach((marker) => {
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .addTo(map);
+  markers.forEach(marker => {
+    new mapboxgl.Marker().setLngLat([marker.lng, marker.lat]).addTo(map);
   });
 };
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
-  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
+  markers.forEach(marker => bounds.extend([marker.lng, marker.lat]));
   map.fitBounds(bounds, { padding: 100, maxZoom: 12 });
 };
 
