@@ -14,25 +14,32 @@ const newBooking = () => {
 
 function increasePassengerAmount() {
   // this.parentNode.querySelector('input[type=number]').stepUp()
-
+  let passengerParagraph = document.getElementById("passenger-count");
   let currentAmount = document.getElementById('booking_passengers');
   const addButton = document.getElementById('add-button');
   if (addButton) {
     addButton.addEventListener('click', () => {
-      if (currentAmount.value < 4) {
+      if (currentAmount.value < 16) {
         currentAmount.stepUp();
+        passengerParagraph.innerText = `${currentAmount.value} passengers`
       }
     });
   }
 }
 
 function decreasePassengerAmount() {
+  let passengerParagraph = document.getElementById("passenger-count");
   let currentAmount = document.getElementById('booking_passengers');
   const subtractButton = document.getElementById('subtract-button');
   if (subtractButton) {
     subtractButton.addEventListener('click', () => {
       if (currentAmount.value > 1) {
         currentAmount.stepDown();
+        if (currentAmount.value == 1) {
+          passengerParagraph.innerText = `${currentAmount.value} passenger`
+        } else {
+          passengerParagraph.innerText = `${currentAmount.value} passengers`
+        }
       }
     });
   }

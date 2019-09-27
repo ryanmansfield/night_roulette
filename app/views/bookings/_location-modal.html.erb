@@ -18,3 +18,11 @@
       </div>
    </div>
 </div>
+
+<% content_for(:after_js) do %>
+  <script>
+    document.getElementById("geo-btn").addEventListener("click", (event) => {
+      document.getElementById("location-text").innerText = "Ladeira da Gloria 26"
+    })
+  </script>
+<% end %>
