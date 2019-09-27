@@ -7,7 +7,9 @@
 
 <section class="content">
    <section class="add-margin-bottom">
-      <% if @booking.status == 'order-confirmed' %>
+      <% if @booking.status == 'pending' %>
+        <%= render 'pending' %>
+      <% elsif @booking.status == 'order-confirmed' %>
         <%= render 'order-confirmed' %>
       <% elsif @booking.status == 'driver-confirmed' %>
         <%= render 'driver-confirmed' %>
