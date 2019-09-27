@@ -11,6 +11,13 @@ const buildMap = () => {
 };
 
 const addMarkersToMap = (map, markers) => {
+  var geojson = [
+    {
+      properties: {
+        'marker-color': '#716969'
+      }
+    }
+  ];
   markers.forEach(marker => {
     new mapboxgl.Marker().setLngLat([marker.lng, marker.lat]).addTo(map);
   });

@@ -5,7 +5,7 @@
     <%= f.input :price %>
     <%= f.input :eta %>
     <%= f.input :pickup_time %>
-    <%= f.input :status, default: 'order-confirmed', collection: ['order-confirmed', 'driver-confirmed', 'pick-confirmed', 'arrival-confirmed', 'not-rated', 'rated'] %>
+    <%= f.input :status, default: 'order-confirmed', collection: ['pending','order-confirmed', 'driver-confirmed', 'pick-confirmed', 'arrival-confirmed', 'not-rated', 'rated'] %>
     <%= f.submit %>
   <% end %>
   <%= link_to "Back", :latest_bookings %>
