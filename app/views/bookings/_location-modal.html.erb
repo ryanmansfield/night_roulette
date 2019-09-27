@@ -1,0 +1,20 @@
+<div class="modal fade" id="location-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div>
+          <%= render 'map-confirmation' %>
+        </div>
+
+        <div id="geo-btn" style="btn btn-confirm-location" data-toggle="modal" data-target="#location-modal">Confirm location</div>
+
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+   </div>
+</div>

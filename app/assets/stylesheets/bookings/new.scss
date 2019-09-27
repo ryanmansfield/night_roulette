@@ -22,3 +22,27 @@
 .form-post {
   margin-bottom: 100px;
 }
+
+#btn-location {
+  padding: 30px;
+  font-weight: bolder;
+  color: white;
+  border: 2px solid $lightgrey;
+  border-radius: 4px;
+  margin: 40px auto 60px;
+}
+
+#geo-btn {
+  color: $darkgrey;
+  padding: 30px;
+  font-weight: bolder;
+  border: 2px solid $lightgrey;
+  border-radius: 4px;
+  margin: 40px auto 60px;
+}
+
+#location-modal {
+  .modal-content {
+    height: 90vh;
+  }
+}
