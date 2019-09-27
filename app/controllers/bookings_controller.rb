@@ -41,6 +41,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @my_place = [{ lat: '-22.921797', lng: '-43.176173' }]
   end
 
   def create

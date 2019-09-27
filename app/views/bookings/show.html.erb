@@ -21,9 +21,10 @@
 
 
 <%# Modal Closer to the body %>
-<%= render 'venues/rating-modal', venue: @venue  %>
-<%= render 'car-order-modal', venue: @venue  %>
 <%= render 'booking-show-link-modal'  %>
+<%= render 'venues/rating-modal', venue: @venue  %>
+<%# It was beening rendered but not used anymore, since we have no more pending status %>
+<%# <%= render 'car-order-modal', venue: @venue  %>
 
 <%# Magic that updates every 3s %>
 <%= link_to "I am invisible", fetch_status_booking_path(@booking.id), id: "invisible-twist", style: "display: none;", remote: true %>
