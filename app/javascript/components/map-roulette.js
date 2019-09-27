@@ -20,12 +20,7 @@ const mapRoulette = () => {
     });
     setTimeout(spinPins, 3000);
   };
-  const spinner = document.querySelector('#spin-it');
-  if (spinner) {
-    spinner.addEventListener('click', e => {
-      spinPins();
-    });
-  }
+  return spinPins();
 };
 
 export { mapRoulette };
