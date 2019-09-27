@@ -1,15 +1,27 @@
-<div class="container container-pending" id="pending">
-   <div class="row trip-details row-pending">
-      <div class="venue-details col-9 map-pending">
+<div class="container" id="pending">
+   <div class="row ct-section_header ct-section_header--type2"></div>
+   <div class="row trip-details">
+      <h1 style="width: 300px;text-align: center;padding-bottom: 20px;"> Picking perfect place!  </h1></br>
+      <div class="venue-details col-9">
         
+         <div class="container">
+            <div class="progress-bar">
+               <div class="loaded-pending">
+
+               </div>
+            </div>
+         </div>
+         
+         </br>
+         
          <div>
             <%= render 'map' %>
          </div>
 
-         <div style="margin:60px auto 0 auto;">
-            <p> Luck is picking a place for you! </p> </br>
-        </div>
+         </br>
+
+         <div id="spin-it" onload="mapRoulette()" style=""></div>
+
       </div>
    </div>
-         <div id="spin-it" onload="mapRoulette()" style=""></div>
 </div>
